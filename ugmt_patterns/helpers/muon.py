@@ -24,8 +24,8 @@ class Muon():
         pt_low = vhdl_dict["PT_{t}_LOW".format(t=mu_type)]
         pt_high = vhdl_dict["PT_{t}_HIGH".format(t=mu_type)]
 
-        sysign_low = vhdl_dict["SYSIGN_{t}_LOW".format(t=mu_type)]
-        sysign_high = vhdl_dict["SYSIGN_{t}_HIGH".format(t=mu_type)]
+        sysign_low = vhdl_dict["SIGN_{t}".format(t=mu_type)]
+        sysign_high = vhdl_dict["VALIDSIGN_{t}".format(t=mu_type)]
 
         trackadd_low = 0
         trackadd_high = 0
@@ -80,8 +80,8 @@ class Muon():
                 self.Sysign = obj.hwSign() + (obj.hwSignValid() << 1)
                 sysign_low += 1
                 sysign_high += 1
-                trackadd_high = vhdl_dict["ADDRESS_IN_HIGH"] + 1
-                trackadd_low = vhdl_dict["ADDRESS_IN_LOW"] + 1
+                trackadd_high = vhdl_dict["BMTF_ADDRESS_STATION_4_IN_LOW"] + 1
+                trackadd_low = vhdl_dict["BMTF_DETECTOR_SIDE_HIGH"] + 1
 
             self.phiBits = obj.hwPhi()
             self.etaBits = obj.hwEta()

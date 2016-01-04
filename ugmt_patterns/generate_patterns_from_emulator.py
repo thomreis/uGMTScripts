@@ -42,8 +42,8 @@ def get_muon_list(emu_product, mu_type, vhdl_dict, bx, check=False):
 
     mulist = [Muon(vhdl_dict, mu_type="IN", bitword=0)]*nexpected
 
-    for mu in emu_product:
-        mu_tmp = Muon(vhdl_dict, mu_type="IN", obj=mu, bx=bx)
+    for i in xrange(emu_product.size(0)):
+        mu_tmp = Muon(vhdl_dict, mu_type="IN", obj=emu_product.at(0, i))
         # only take muons from the right side of the detector
         if mu_type.endswith("POS") and mu_tmp.etaBits < 0:
             continue
@@ -51,7 +51,7 @@ def get_muon_list(emu_product, mu_type, vhdl_dict, bx, check=False):
             continue
 
         # because we don't book all 72*3 muons but only 18*3/36*3
-        loc_link = mu.processor()-1
+        loc_link = emu_product.at(0, i).processor()-1
         if mulist[loc_link*3].ptBits == 0:
             mu_tmp.setBunchCounter(0)
             mulist[loc_link*3] = mu_tmp
@@ -77,10 +77,10 @@ def get_muon_list(emu_product, mu_type, vhdl_dict, bx, check=False):
 
 def get_calo_list(raw_sums):
     calo_sums = [0]*36*28
-    for csum in raw_sums:
-        idx = csum.hwPhi() + csum.hwEta()*36
-        # print csum.hwPhi(), csum.hwEta()
-        calo_sums[idx] = csum.etBits()
+    for i in xrange(raw_sums.size(0)):
+        idx = raw_sums.at(0, i).hwPhi() + raw_sums.at(0, i).hwEta()*36
+        # print raw_sums.at(0, i).hwPhi(), raw_sums.at(0, i).hwEta()
+        calo_sums[idx] = raw_sums.at(0, i).etBits()
     return calo_sums
 
 
@@ -109,10 +109,10 @@ def main():
         imd_emtf_n_handle = Handle('BXVector<l1t::Muon>')
         imd_omtf_p_handle = Handle('BXVector<l1t::Muon>')
         imd_omtf_n_handle = Handle('BXVector<l1t::Muon>')
-        bar_handle = Handle('std::vector<l1t::L1TRegionalMuonCandidate>')
-        fwd_handle = Handle('std::vector<l1t::L1TRegionalMuonCandidate>')
-        ovl_handle = Handle('std::vector<l1t::L1TRegionalMuonCandidate>')
-        calo_handle = Handle('std::vector<l1t::L1TGMTInputCaloSum>')
+        bar_handle = Handle('BXVector<l1t::RegionalMuonCand>')
+        fwd_handle = Handle('BXVector<l1t::RegionalMuonCand>')
+        ovl_handle = Handle('BXVector<l1t::RegionalMuonCand>')
+        calo_handle = Handle('BXVector<l1t::MuonCaloSum>')
 
         basedir_testbench = "data/patterns/testbench/"
         basedir_mp7 = "data/patterns/mp7/"
@@ -143,17 +143,17 @@ def main():
             deserializer_testbench.addLine(event_head)
             integration_testbench.addLine(event_head)
 
-            event.getByLabel("microGMTEmulator", out_handle)
-            event.getByLabel("microGMTEmulator", "imdMuonsBMTF", imd_bmtf_handle)
-            event.getByLabel("microGMTEmulator", "imdMuonsEMTFPos", imd_emtf_p_handle)
-            event.getByLabel("microGMTEmulator", "imdMuonsEMTFNeg", imd_emtf_n_handle)
-            event.getByLabel("microGMTEmulator", "imdMuonsOMTFPos", imd_omtf_p_handle)
-            event.getByLabel("microGMTEmulator", "imdMuonsOMTFNeg", imd_omtf_n_handle)
-            event.getByLabel("uGMTInputProducer", "BarrelTFMuons", bar_handle)
-            event.getByLabel("uGMTInputProducer", "ForwardTFMuons", fwd_handle)
-            event.getByLabel("uGMTInputProducer", "OverlapTFMuons", ovl_handle)
+            event.getByLabel("simGmtDigis", out_handle)
+            event.getByLabel("simGmtDigis", "imdMuonsBMTF", imd_bmtf_handle)
+            event.getByLabel("simGmtDigis", "imdMuonsEMTFPos", imd_emtf_p_handle)
+            event.getByLabel("simGmtDigis", "imdMuonsEMTFNeg", imd_emtf_n_handle)
+            event.getByLabel("simGmtDigis", "imdMuonsOMTFPos", imd_omtf_p_handle)
+            event.getByLabel("simGmtDigis", "imdMuonsOMTFNeg", imd_omtf_n_handle)
+            event.getByLabel("simBmtfDigis", "BMTF", bar_handle)
+            event.getByLabel("simEmtfDigis", "EMTF", fwd_handle)
+            event.getByLabel("simOmtfDigis", "OMTF", ovl_handle)
 
-            event.getByLabel("uGMTInputProducer", "TriggerTowerSums", calo_handle)
+            event.getByLabel("simGmtCaloSumDigis", "TriggerTowerSums", calo_handle)
             get_label_time = time.time() - evt_start
             calo_sums_raw = calo_handle.product()
             calo_sums = get_calo_list(calo_sums_raw)

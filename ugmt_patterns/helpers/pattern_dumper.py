@@ -315,11 +315,11 @@ class PatternDumper(object):
         for x in range(6):
             frames[x] = [0]*72
 
-        self.writeMuonsToFrames(frames, "BARREL", bar_muons, 3, 36)
-        self.writeMuonsToFrames(frames, "FWD_NEG", fwdn_muons, 3, 36)
-        self.writeMuonsToFrames(frames, "FWD_POS", fwdp_muons, 3, 36)
-        self.writeMuonsToFrames(frames, "OVL_POS", ovlp_muons, 3, 36)
-        self.writeMuonsToFrames(frames, "OVL_NEG", ovln_muons, 3, 36)
+        self.writeMuonsToFrames(frames, "BMTF", bar_muons, 3, 36)
+        self.writeMuonsToFrames(frames, "EMTF_NEG", fwdn_muons, 3, 36)
+        self.writeMuonsToFrames(frames, "EMTF_POS", fwdp_muons, 3, 36)
+        self.writeMuonsToFrames(frames, "OMTF_POS", ovlp_muons, 3, 36)
+        self.writeMuonsToFrames(frames, "OMTF_NEG", ovln_muons, 3, 36)
 
         if calosums:
             self.writeCaloToFrames(frames, calosums)
