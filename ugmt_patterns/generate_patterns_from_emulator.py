@@ -8,7 +8,7 @@ import time
 
 def setupROOT():
     gSystem.Load("libFWCoreFWLite")
-    gROOT.ProcessLine('AutoLibraryLoader::enable();')
+    gROOT.ProcessLine('FWLiteEnabler::enable();')
     # gSystem.Load("libCintex")
     # gROOT.ProcessLine('ROOT::Cintex::Cintex::Enable();')
 

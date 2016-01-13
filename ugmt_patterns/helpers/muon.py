@@ -42,6 +42,10 @@ class Muon():
         if mu_type == "OUT":
             iso_low = vhdl_dict["ISO_OUT_LOW"]
             iso_high = vhdl_dict["ISO_OUT_HIGH"]
+        else:
+            trackadd_high = vhdl_dict["BMTF_ADDRESS_STATION_4_IN_LOW"] + 1
+            trackadd_low = vhdl_dict["BMTF_DETECTOR_SIDE_HIGH"] + 1
+            self.trackAddress = [0]*6
 
         if obj == None and bitword != None:     # for hardware
             self.bitword = bitword
@@ -80,8 +84,7 @@ class Muon():
                 self.Sysign = obj.hwSign() + (obj.hwSignValid() << 1)
                 sysign_low += 1
                 sysign_high += 1
-                trackadd_high = vhdl_dict["BMTF_ADDRESS_STATION_4_IN_LOW"] + 1
-                trackadd_low = vhdl_dict["BMTF_DETECTOR_SIDE_HIGH"] + 1
+                self.trackAddress = obj.trackAddress()
 
             self.phiBits = obj.hwPhi()
             self.etaBits = obj.hwEta()

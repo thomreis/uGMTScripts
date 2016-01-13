@@ -111,6 +111,11 @@ class TestbenchWriter(object):
                                 empty="EMPT",
                                 iso="(ISO)",
                             )]
+
+    def writeBMTFTrackAddressHeadline(self):
+        """ documenting the individual track quantities """
+        self.string += ["# BMTF TRACK ADDRESS\n#TYPE     SEL0 WHEEL0 SECT10 SECT20 SECT30 SECT40 QUAL0  SEL1 WHEEL1 SECT11 SECT21 SECT31 SECT41 QUAL1  SEL2 WHEEL2 SECT12 SECT22 SECT32 SECT42 QUAL2\n"]
+
     def writeTrackHeadline(self):
         """ documenting the individual track quantities """
         self.string += ["# TRACKS\n#TYPE   ETA0  PHI0 QUAL0  ETA1  PHI1 QUAL1  ETA2  PHI2 QUAL2\n"]
@@ -171,6 +176,19 @@ class TestbenchWriter(object):
             if i%3==0:
                 self.string += ["{id:<6}".format(id=track_type)]
             self.string += [" {eta:>5} {phi:>5} {qual:>5}".format(eta=track[0], phi=track[1], qual=track[2])]
+            if (i+1)%3 == 0:
+                self.string += ["\n"]
+
+    def writeBMTFTrackAddress(self, trackAddresses):
+        """
+        Adds the BMTF track address information to the buffer.
+        TAKES:
+            trackAddresses: list of [selector, wheel, sect1, sect2, sect3, sect4, qual]*n_tracks
+        """
+        for i, trkAddr in enumerate(trackAddresses):
+            if i%3==0:
+                self.string += ["{id:<6}".format(id='BTRKADDR')]
+            self.string += ["{sel:>6} {wheel:>6} {sect1:>6} {sect2:>6} {sect3:>6} {sect4:>6} {qual:>5}".format(sel=trkAddr[0], wheel=trkAddr[1], sect1=trkAddr[2], sect2=trkAddr[3], sect3=trkAddr[4], sect4=trkAddr[5], qual=trkAddr[6])]
             if (i+1)%3 == 0:
                 self.string += ["\n"]
 
@@ -236,6 +254,9 @@ class TestvectorWriter(object):
         pass
 
     def writeTrackHeadline(self):
+        pass
+
+    def writeBMTFTrackAddressHeadline(self):
         pass
 
     def writeMuonHeadline(self):
@@ -355,6 +376,13 @@ class PatternDumper(object):
             tracks.append([muon.etaBits, muon.phiBits, muon.qualityBits])
         self._writer.writeTracks(tracks, track_type)
 
+    def writeBMTFTrackAddressGroup(self, muons):
+        trackAddresses = []
+        for i, muon in enumerate(muons):
+            trkAddr = muon.trackAddress
+            trackAddresses.append([0, trkAddr[0], trkAddr[1], trkAddr[2], trkAddr[3], trkAddr[4], muon.qualityBits])
+        self._writer.writeBMTFTrackAddress(trackAddresses)
+
     def writeMuonBasedInputBX(self, bar_muons, fwdp_muons, fwdn_muons, ovlp_muons, ovln_muons, calosums, addTracks = False, addBXCounter = False):
         if addBXCounter:
             self._writer.writeBXCounter(self._bxCounter)
@@ -381,6 +409,9 @@ class PatternDumper(object):
             self.writeTrackGroup(bar_muons, "BTRK")
             self.writeTrackGroup(ovln_muons, "OTRK-")
             self.writeTrackGroup(fwdn_muons, "FTRK-")
+
+            self._writer.writeBMTFTrackAddressHeadline()
+            self.writeBMTFTrackAddressGroup(bar_muons)
 
         self._bxCounter += 1
 
