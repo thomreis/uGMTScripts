@@ -142,7 +142,7 @@ class TestbenchWriter(object):
         isempty = 0
         if mu.ptBits == 0: isempty = 1
         sortrank = 0
-        if mu_type in ["FIMD", "BIMD", "OIMD", "OUT"]:
+        if mu_type in ["EIMD", "BIMD", "OIMD", "OUT"]:
             sortrank = mu.rank
         else:
             sortrank = mu.ptBits + mu.qualityBits
@@ -354,7 +354,7 @@ class PatternDumper(object):
         themuid = mutype
         for i, muon in enumerate(muons):
             if mutype == "IMD":
-                if i < 4 or i > 19: themuid = "FIMD"
+                if i < 4 or i > 19: themuid = "EIMD"
                 elif i < 8 or i > 15: themuid = "OIMD"
                 else: themuid = "BIMD"
             link = i
@@ -396,19 +396,19 @@ class PatternDumper(object):
         except AttributeError:
             self._log.error("You are trying to write muons with the wrong Writer class. Only supports frame-based writing.")
             return
-        self.writeMuonGroup(fwdp_muons, "FWD+", False)
-        self.writeMuonGroup(ovlp_muons, "OVL+", False)
-        self.writeMuonGroup(bar_muons, "BAR", False)
-        self.writeMuonGroup(ovln_muons, "OVL-", False)
-        self.writeMuonGroup(fwdn_muons, "FWD-", False)
+        self.writeMuonGroup(fwdp_muons, "EMTF+", False)
+        self.writeMuonGroup(ovlp_muons, "OMTF+", False)
+        self.writeMuonGroup(bar_muons, "BMTF", False)
+        self.writeMuonGroup(ovln_muons, "OMTF-", False)
+        self.writeMuonGroup(fwdn_muons, "EMTF-", False)
 
         if addTracks:
             self._writer.writeTrackHeadline()
-            self.writeTrackGroup(fwdp_muons, "FTRK+")
+            self.writeTrackGroup(fwdp_muons, "ETRK+")
             self.writeTrackGroup(ovlp_muons, "OTRK+")
             self.writeTrackGroup(bar_muons, "BTRK")
             self.writeTrackGroup(ovln_muons, "OTRK-")
-            self.writeTrackGroup(fwdn_muons, "FTRK-")
+            self.writeTrackGroup(fwdn_muons, "ETRK-")
 
             self._writer.writeBMTFTrackAddressHeadline()
             self.writeBMTFTrackAddressGroup(bar_muons)
