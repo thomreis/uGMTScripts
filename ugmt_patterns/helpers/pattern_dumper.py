@@ -58,7 +58,7 @@ class TestbenchWriter(object):
 # Pattern for testbench of the uGMT algo block
 # Data format of muons:
 # ID N PT PHI ETA CHARGE CHARGE_VALID QUALITY SORT EMPTY (ISO)
-# where ID = {FWD+/-, OVL+/-, BAR, OUT, FIMD, BIMD, OIMD}
+# where ID = {EMTF+/-, OMTF+/-, BMTF, OUT, EIMD, BIMD, OIMD}
 # N is the rank for IMD / OUT and the link for inputs.
 # ISO is optional and only present for OUT
 #
@@ -134,8 +134,8 @@ class TestbenchWriter(object):
         """
         Convert a single ./helpers/muon.Muon object into string
         TAKES:  mu          Muon object
-                mu_type     muon type (BAR, FWD+/-, OVL+/-, FIMD, BIMD, OIMD, OUT)
-                rank        relative position of the muon (IMD: 0-23, OUT: 0-7, FWD/OVL: 0-37, BAR: 0-35)
+                mu_type     muon type (BMTF, EMTF+/-, OMTF+/-, EIMD, BIMD, OIMD, OUT)
+                rank        relative position of the muon (IMD: 0-23, OUT: 0-7, EMTF/OMTF: 0-37, BMTF: 0-35)
                 addIso      whether to add isolation info (should only be done for OUT)
         Adds to self.string "ID N PT PHI ETA CHARGE CHARGE_VALID QUALITY SORT EMPTY (ISO)"
         """
@@ -227,8 +227,8 @@ class TestvectorWriter(object):
         """
         Convert a single ./helpers/muon.Muon object into string
         TAKES:  mu          Muon object
-                mu_type     muon type (BAR, FWD+/-, OVL+/-, FIMD, BIMD, OIMD, OUT)
-                rank        relative position of the muon (IMD: 0-23, OUT: 0-7, FWD/OVL: 0-37, BAR: 0-35)
+                mu_type     muon type (BMTF, EMTF+/-, OMTF+/-, EIMD, BIMD, OIMD, OUT)
+                rank        relative position of the muon (IMD: 0-23, OUT: 0-7, EMTF/OMTF: 0-37, BMTF: 0-35)
                 addIso      whether to add isolation info (should only be done for OUT)
         Adds to string "ID N PT PHI ETA CHARGE CHARGE_VALID QUALITY SORT EMPTY (ISO) (TWR)"
         """
@@ -410,8 +410,8 @@ class PatternDumper(object):
             self.writeTrackGroup(ovln_muons, "OTRK-")
             self.writeTrackGroup(fwdn_muons, "ETRK-")
 
-            self._writer.writeBMTFTrackAddressHeadline()
-            self.writeBMTFTrackAddressGroup(bar_muons)
+            #self._writer.writeBMTFTrackAddressHeadline()
+            #self.writeBMTFTrackAddressGroup(bar_muons)
 
         self._bxCounter += 1
 

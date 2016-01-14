@@ -21,6 +21,28 @@ class Muon():
         # get the bit boundaries for the muon quantities
         self.bx = bx
 
+        self.frame = frame
+        self.tftype = -1
+        self.link = link
+        self.local_link = link
+        if self.link != -1:
+            self.local_link = self.link - 36
+            if self.local_link < vhdl_dict["EMTF_POS_HIGH"]:
+                self.tftype = 2
+                pass
+            elif self.local_link < vhdl_dict["OMTF_POS_HIGH"]:
+                self.local_link -= vhdl_dict["OMTF_POS_LOW"]
+                self.tftype = 1
+            elif self.local_link < vhdl_dict["BMTF_HIGH"]:
+                self.local_link -= vhdl_dict["BMTF_LOW"]
+                self.tftype = 0
+            elif self.local_link < vhdl_dict["OMTF_NEG_HIGH"]:
+                self.local_link -= vhdl_dict["OMTF_NEG_LOW"]
+                self.tftype = 1
+            else:
+                self.local_link -= vhdl_dict["EMTF_NEG_LOW"]
+                self.tftype = 2
+
         pt_low = vhdl_dict["PT_{t}_LOW".format(t=mu_type)]
         pt_high = vhdl_dict["PT_{t}_HIGH".format(t=mu_type)]
 
@@ -54,16 +76,18 @@ class Muon():
             self.etaBits = bithlp.twos_complement_to_signed(self.etaBits, eta_high-eta_low+1)
             self.qualityBits = bithlp.get_shifted_subword(self.bitword, qual_low, qual_high)
             self.ptBits = bithlp.get_shifted_subword(self.bitword, pt_low, pt_high)
+            self.phiBits = bithlp.get_shifted_subword(self.bitword, phi_low, phi_high)
+            self.globPhiBits = self.phiBits
             if mu_type == "OUT":
-                self.phiBits = bithlp.get_shifted_subword(self.bitword, phi_low, phi_high)
                 self.Iso = bithlp.get_shifted_subword(self.bitword, iso_low, iso_high)
             else:
                 self.Iso = 0
                 # for input have to mask the 31st bit as it is control bit
                 # as of moving to local phi this is not needed anymore
                 # self.phiBits = self.decode_phi(phi_low, phi_high)
-                self.phiBits = bithlp.get_shifted_subword(self.bitword, phi_low, phi_high)
                 # we have to adjust these values as they are beyond the 32 bit boundary
+                if self.local_link != -1:
+                    self.globPhiBits = self.calcGlobalPhi(self.ptBits, self.tftype, self.local_link)
 
             self.rank = 0
             self.globPhiBits = self.phiBits
@@ -85,6 +109,8 @@ class Muon():
                 sysign_low += 1
                 sysign_high += 1
                 self.trackAddress = obj.trackAddress()
+                if gPhi is None:
+                    self.globPhiBits = self.calcGlobalPhi(obj.hwPhi(), obj.trackFinderType(), obj.processor())
 
             self.phiBits = obj.hwPhi()
             self.etaBits = obj.hwEta()
@@ -101,22 +127,6 @@ class Muon():
 
             if mu_type == "OUT" and self.Iso > 0:
                 self.bitword += (self.Iso << iso_low)
-
-        self.frame = frame
-        self.link = link
-        self.local_link = -1
-        if self.link != -1:
-            self.local_link = self.link - 36
-            if self.local_link < vhdl_dict["EMTF_POS_HIGH"]:
-                pass
-            elif self.local_link < vhdl_dict["OMTF_POS_HIGH"]:
-                self.local_link -= vhdl_dict["OMTF_POS_LOW"]
-            elif self.local_link < vhdl_dict["BMTF_HIGH"]:
-                self.local_link -= vhdl_dict["BMTF_LOW"]
-            elif self.local_link < vhdl_dict["OMTF_NEG_HIGH"]:
-                self.local_link -= vhdl_dict["OMTF_NEG_LOW"]
-            else:
-                self.local_link -= vhdl_dict["EMTF_NEG_LOW"]
 
     def setBunchCounter(self, n_mu):
         if n_mu == 1:
@@ -174,3 +184,23 @@ class Muon():
         msw_mask = bithlp.get_mask(7, 10)
         val = (raw_val & lsw_mask) + ((raw_val & msw_mask) >> 1)
         return val
+
+    def calcGlobalPhi(self, locPhi, tftype, processor):
+        """
+        Calculate the global phi from the local phi of the TF candidate, the TF type, and the processor number
+        """
+        globPhi = 0
+        if tftype == 0: # BMTF
+            # each BMTF processor corresponds to a 30 degree wedge = 48 in int-scale
+            globPhi = processor * 48 + locPhi
+            # first processor starts at CMS phi = -15 degrees...
+            globPhi += 576 - 24
+            # handle wrap-around (since we add the 576-24, the value will never be negative!)
+            globPhi %= 576
+        else:
+            # all others correspond to 60 degree sectors = 96 in int-scale
+            globPhi = processor * 96 + locPhi
+            # first processor starts at CMS phi = 15 degrees... Handle wrap-around with %:
+            globPhi = (globPhi + 24) % 576
+        return globPhi
+
