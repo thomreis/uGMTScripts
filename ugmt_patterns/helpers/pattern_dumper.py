@@ -112,13 +112,13 @@ class TestbenchWriter(object):
                                 iso="(ISO)",
                             )]
 
-    def writeBMTFTrackAddressHeadline(self):
-        """ documenting the individual track quantities """
-        self.string += ["# BMTF TRACK ADDRESS\n#TYPE     SEL0 WHEEL0 SECT10 SECT20 SECT30 SECT40 QUAL0  SEL1 WHEEL1 SECT11 SECT21 SECT31 SECT41 QUAL1  SEL2 WHEEL2 SECT12 SECT22 SECT32 SECT42 QUAL2\n"]
-
     def writeTrackHeadline(self):
         """ documenting the individual track quantities """
-        self.string += ["# TRACKS\n#TYPE   ETA0  PHI0 QUAL0  ETA1  PHI1 QUAL1  ETA2  PHI2 QUAL2\n"]
+        self.string += ["# TRACKS\n#TYPE   ETA0  PHI0 QUAL0 EMPT0  ETA1  PHI1 QUAL1 EMPT1  ETA2  PHI2 QUAL2 EMPT2\n"]
+
+    def writeBMTFTrackAddressHeadline(self):
+        """ documenting the individual track quantities """
+        self.string += ["# BMTF TRACK ADDRESS\n#TYPE     SEL0 WHEEL0 SECT10 SECT20 SECT30 SECT40 QUAL0 EMPT0  SEL1 WHEEL1 SECT11 SECT21 SECT31 SECT41 QUAL1 EMPT1  SEL2 WHEEL2 SECT12 SECT22 SECT32 SECT42 QUAL2 EMPT2\n"]
 
     def writeEventHeader(self, n):
         self.string += ["# Event {n}\n".format(n=n)]
@@ -169,13 +169,13 @@ class TestbenchWriter(object):
         """
         Adds the track information to the buffer.
         TAKES:
-            tracks: list of [eta, phi, qual]*n_tracks
+            tracks: list of [eta, phi, qual, empty]*n_tracks
             track_type: track-id = {FTRK+/-, BTRK, OTRK+/-}
         """
         for i, track in enumerate(tracks):
             if i%3==0:
                 self.string += ["{id:<6}".format(id=track_type)]
-            self.string += [" {eta:>5} {phi:>5} {qual:>5}".format(eta=track[0], phi=track[1], qual=track[2])]
+            self.string += [" {eta:>5} {phi:>5} {qual:>5} {empty:>5}".format(eta=track[0], phi=track[1], qual=track[2], empty=track[3])]
             if (i+1)%3 == 0:
                 self.string += ["\n"]
 
@@ -183,12 +183,12 @@ class TestbenchWriter(object):
         """
         Adds the BMTF track address information to the buffer.
         TAKES:
-            trackAddresses: list of [selector, wheel, sect1, sect2, sect3, sect4, qual]*n_tracks
+            trackAddresses: list of [selector, wheel, sect1, sect2, sect3, sect4, qual, empty]*n_tracks
         """
         for i, trkAddr in enumerate(trackAddresses):
             if i%3==0:
                 self.string += ["{id:<6}".format(id='BTRKADDR')]
-            self.string += ["{sel:>6} {wheel:>6} {sect1:>6} {sect2:>6} {sect3:>6} {sect4:>6} {qual:>5}".format(sel=trkAddr[0], wheel=trkAddr[1], sect1=trkAddr[2], sect2=trkAddr[3], sect3=trkAddr[4], sect4=trkAddr[5], qual=trkAddr[6])]
+            self.string += ["{sel:>6} {wheel:>6} {sect1:>6} {sect2:>6} {sect3:>6} {sect4:>6} {qual:>5} {empty:>5}".format(sel=trkAddr[0], wheel=trkAddr[1], sect1=trkAddr[2], sect2=trkAddr[3], sect3=trkAddr[4], sect4=trkAddr[5], qual=trkAddr[6], empty=trkAddr[7])]
             if (i+1)%3 == 0:
                 self.string += ["\n"]
 
@@ -373,14 +373,18 @@ class PatternDumper(object):
     def writeTrackGroup(self, muons, track_type):
         tracks = []
         for i, muon in enumerate(muons):
-            tracks.append([muon.etaBits, muon.phiBits, muon.qualityBits])
+            isEmpty = 0
+            if muon.ptBits == 0: isEmpty = 1
+            tracks.append([muon.etaBits, muon.phiBits, muon.qualityBits, isEmpty])
         self._writer.writeTracks(tracks, track_type)
 
     def writeBMTFTrackAddressGroup(self, muons):
         trackAddresses = []
         for i, muon in enumerate(muons):
+            isEmpty = 0
+            if muon.ptBits == 0: isEmpty = 1
             trkAddr = muon.trackAddress
-            trackAddresses.append([0, trkAddr[0], trkAddr[1], trkAddr[2], trkAddr[3], trkAddr[4], muon.qualityBits])
+            trackAddresses.append([0, trkAddr[0], trkAddr[1], trkAddr[2], trkAddr[3], trkAddr[4], muon.qualityBits, isEmpty])
         self._writer.writeBMTFTrackAddress(trackAddresses)
 
     def writeMuonBasedInputBX(self, bar_muons, fwdp_muons, fwdn_muons, ovlp_muons, ovln_muons, calosums, addTracks = False, addBXCounter = False):

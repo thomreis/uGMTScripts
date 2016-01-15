@@ -65,8 +65,8 @@ class Muon():
             iso_low = vhdl_dict["ISO_OUT_LOW"]
             iso_high = vhdl_dict["ISO_OUT_HIGH"]
         else:
-            trackadd_high = vhdl_dict["BMTF_ADDRESS_STATION_4_IN_LOW"] + 1
-            trackadd_low = vhdl_dict["BMTF_DETECTOR_SIDE_HIGH"] + 1
+            trackadd_low = vhdl_dict["BMTF_ADDRESS_STATION_4_IN_LOW"] - 2
+            trackadd_high = vhdl_dict["BMTF_DETECTOR_SIDE_HIGH"] + 4
             self.trackAddress = [0]*6
 
         if obj == None and bitword != None:     # for hardware
@@ -109,6 +109,7 @@ class Muon():
                 sysign_low += 1
                 sysign_high += 1
                 self.trackAddress = obj.trackAddress()
+                #print 'tftype: {0}'.format(obj.trackFinderType())
                 if gPhi is None:
                     self.globPhiBits = self.calcGlobalPhi(obj.hwPhi(), obj.trackFinderType(), obj.processor())
 
@@ -127,6 +128,7 @@ class Muon():
 
             if mu_type == "OUT" and self.Iso > 0:
                 self.bitword += (self.Iso << iso_low)
+            #print '{mtype} bitword  {word:0>16x}, {bit:x}'.format(mtype=mu_type, word=self.bitword, bit=self.qualityBits)
 
     def setBunchCounter(self, n_mu):
         if n_mu == 1:
