@@ -109,7 +109,11 @@ class Muon():
                 sysign_low += 1
                 sysign_high += 1
                 self.trackAddress = obj.trackAddress()
-                #print 'tftype: {0}'.format(obj.trackFinderType())
+                self.tftype = obj.trackFinderType()
+                if self.tftype == 1 or self.tftype == 2:
+                    self.tftype = 1
+                elif self.tftype == 3 or self.tftype == 4:
+                    self.tftype = 2
                 if gPhi is None:
                     self.globPhiBits = self.calcGlobalPhi(obj.hwPhi(), obj.trackFinderType(), obj.processor())
 
@@ -128,7 +132,20 @@ class Muon():
 
             if mu_type == "OUT" and self.Iso > 0:
                 self.bitword += (self.Iso << iso_low)
-            #print '{mtype} bitword  {word:0>16x}, {bit:x}'.format(mtype=mu_type, word=self.bitword, bit=self.qualityBits)
+
+            if self.tftype == 0:
+                self.bitword += (self.trackAddress[0] > 0) << vhdl_dict["BMTF_DETECTOR_SIDE_LOW"]
+                self.bitword += abs(self.trackAddress[0]) << vhdl_dict["BMTF_WHEEL_NO_IN_LOW"]
+                self.bitword += self.trackAddress[1] << vhdl_dict["BMTF_ADDRESS_STATION_1_IN_LOW"]
+                self.bitword += self.trackAddress[2] << vhdl_dict["BMTF_ADDRESS_STATION_2_IN_LOW"]
+                self.bitword += self.trackAddress[3] << vhdl_dict["BMTF_ADDRESS_STATION_3_IN_LOW"]
+                self.bitword += self.trackAddress[4] << vhdl_dict["BMTF_ADDRESS_STATION_4_IN_LOW"]
+            elif self.tftype == 1:
+                self.bitword += self.trackAddress[0] << trackadd_low
+            elif self.tftype == 2:
+                self.bitword += self.trackAddress[0] << trackadd_low
+
+            #print '{mtype} {tftype} bitword  {word:0>16x}, {bit:x}'.format(mtype=mu_type, tftype=self.tftype, word=self.bitword, bit=self.qualityBits)
 
     def setBunchCounter(self, n_mu):
         if n_mu == 1:
