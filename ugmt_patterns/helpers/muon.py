@@ -82,10 +82,6 @@ class Muon():
                 self.Iso = bithlp.get_shifted_subword(self.bitword, iso_low, iso_high)
             else:
                 self.Iso = 0
-                # for input have to mask the 31st bit as it is control bit
-                # as of moving to local phi this is not needed anymore
-                # self.phiBits = self.decode_phi(phi_low, phi_high)
-                # we have to adjust these values as they are beyond the 32 bit boundary
                 if self.local_link != -1:
                     self.globPhiBits = self.calcGlobalPhi(self.ptBits, self.tftype, self.local_link)
 
@@ -106,8 +102,11 @@ class Muon():
                 self.Iso = 0
                 self.rank = 0
                 self.Sysign = obj.hwSign() + (obj.hwSignValid() << 1)
+                # shift by +1 necessary because of the control bit 31
                 sysign_low += 1
                 sysign_high += 1
+                trackadd_low += 1
+                trackadd_high += 1
                 self.trackAddress = obj.trackAddress()
                 self.tftype = obj.trackFinderType()
                 if self.tftype == 1 or self.tftype == 2:
@@ -134,12 +133,13 @@ class Muon():
                 self.bitword += (self.Iso << iso_low)
 
             if self.tftype == 0:
-                self.bitword += (self.trackAddress[0] > 0) << vhdl_dict["BMTF_DETECTOR_SIDE_LOW"]
-                self.bitword += abs(self.trackAddress[0]) << vhdl_dict["BMTF_WHEEL_NO_IN_LOW"]
-                self.bitword += self.trackAddress[1] << vhdl_dict["BMTF_ADDRESS_STATION_1_IN_LOW"]
-                self.bitword += self.trackAddress[2] << vhdl_dict["BMTF_ADDRESS_STATION_2_IN_LOW"]
-                self.bitword += self.trackAddress[3] << vhdl_dict["BMTF_ADDRESS_STATION_3_IN_LOW"]
-                self.bitword += self.trackAddress[4] << vhdl_dict["BMTF_ADDRESS_STATION_4_IN_LOW"]
+                # shift by +1 necessary because of the control bit 31
+                self.bitword += (self.trackAddress[0] > 0) << vhdl_dict["BMTF_DETECTOR_SIDE_LOW"] + 1
+                self.bitword += abs(self.trackAddress[0]) << vhdl_dict["BMTF_WHEEL_NO_IN_LOW"] + 1
+                self.bitword += self.trackAddress[1] << vhdl_dict["BMTF_ADDRESS_STATION_1_IN_LOW"] + 1
+                self.bitword += self.trackAddress[2] << vhdl_dict["BMTF_ADDRESS_STATION_2_IN_LOW"] + 1
+                self.bitword += self.trackAddress[3] << vhdl_dict["BMTF_ADDRESS_STATION_3_IN_LOW"] + 1
+                self.bitword += self.trackAddress[4] << vhdl_dict["BMTF_ADDRESS_STATION_4_IN_LOW"] + 1
             elif self.tftype == 1:
                 self.bitword += self.trackAddress[0] << trackadd_low
             elif self.tftype == 2:
