@@ -51,7 +51,7 @@ def get_muon_list(emu_product, mu_type, vhdl_dict, bx, check=False):
             continue
 
         # because we don't book all 72*3 muons but only 18*3/36*3
-        loc_link = emu_product.at(0, i).processor()-1
+        loc_link = emu_product.at(0, i).processor()
         if mulist[loc_link*3].ptBits == 0:
             mu_tmp.setBunchCounter(0)
             mulist[loc_link*3] = mu_tmp
