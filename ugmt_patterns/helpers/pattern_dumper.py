@@ -114,7 +114,11 @@ class TestbenchWriter(object):
 
     def writeTrackHeadline(self):
         """ documenting the individual track quantities """
-        self.string += ["# TRACKS\n#TYPE   ETA0  PHI0 QUAL0 EMPT0  ETA1  PHI1 QUAL1 EMPT1  ETA2  PHI2 QUAL2 EMPT2\n"]
+        self.string += ["# OVERLAP/ENDCAP TRACKS\n#TYPE   ETA0  PHI0 QUAL0 EMPT0  ETA1  PHI1 QUAL1 EMPT1  ETA2  PHI2 QUAL2 EMPT2\n"]
+
+    def writeBTRKTrackHeadline(self):
+        """ documenting the individual track quantities """
+        self.string += ["# BARREL TRACKS\n#TYPE   ETA0  PHI0 QUAL0  SEL0  WHL0 SCT10 SCT20 SCT30 SCT40 EMPT0  ETA1  PHI1 QUAL1  SEL1  WHL1 SCT11 SCT21 SCT31 SCT41 EMPT1  ETA2  PHI2 QUAL2  SEL2  WHL2 SCT12 SCT22 SCT32 SCT42 EMPT2\n"]
 
     def writeBMTFTrackAddressHeadline(self):
         """ documenting the individual track quantities """
@@ -169,13 +173,17 @@ class TestbenchWriter(object):
         """
         Adds the track information to the buffer.
         TAKES:
-            tracks: list of [eta, phi, qual, empty]*n_tracks
+            For BTRK track_type: tracks: list of [eta, phi, qual, selector, wheel, sect1, sect2, sect3, sect4, empty]*n_tracks
+            For other track_types: tracks: list of [eta, phi, qual, empty]*n_tracks
             track_type: track-id = {FTRK+/-, BTRK, OTRK+/-}
         """
         for i, track in enumerate(tracks):
             if i%3==0:
                 self.string += ["{id:<6}".format(id=track_type)]
-            self.string += [" {eta:>5} {phi:>5} {qual:>5} {empty:>5}".format(eta=track[0], phi=track[1], qual=track[2], empty=track[3])]
+            if track_type == 'BTRK':
+                self.string += [" {eta:>5} {phi:>5} {qual:>5} {sel:>5} {wheel:>5} {sect1:>5} {sect2:>5} {sect3:>5} {sect4:>5} {empty:>5}".format(eta=track[0], phi=track[1], qual=track[2], sel=track[3], wheel=track[4], sect1=track[5], sect2=track[6], sect3=track[7], sect4=track[8], empty=track[9])]
+            else:
+                self.string += [" {eta:>5} {phi:>5} {qual:>5} {empty:>5}".format(eta=track[0], phi=track[1], qual=track[2], empty=track[3])]
             if (i+1)%3 == 0:
                 self.string += ["\n"]
 
@@ -375,7 +383,11 @@ class PatternDumper(object):
         for i, muon in enumerate(muons):
             isEmpty = 0
             if muon.ptBits == 0: isEmpty = 1
-            tracks.append([muon.etaBits, muon.phiBits, muon.qualityBits, isEmpty])
+            if track_type == 'BTRK':
+                trkAddr = muon.trackAddress
+                tracks.append([muon.etaBits, muon.phiBits, muon.qualityBits, 0, trkAddr[0], trkAddr[1], trkAddr[2], trkAddr[3], trkAddr[4], isEmpty])
+            else:
+                tracks.append([muon.etaBits, muon.phiBits, muon.qualityBits, isEmpty])
         self._writer.writeTracks(tracks, track_type)
 
     def writeBMTFTrackAddressGroup(self, muons):
@@ -408,6 +420,7 @@ class PatternDumper(object):
 
         if addTracks:
             self._writer.writeTrackHeadline()
+            self._writer.writeBTRKTrackHeadline()
             self.writeTrackGroup(fwdp_muons, "ETRK+")
             self.writeTrackGroup(ovlp_muons, "OTRK+")
             self.writeTrackGroup(bar_muons, "BTRK")
