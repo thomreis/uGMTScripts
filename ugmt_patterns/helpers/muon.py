@@ -134,12 +134,12 @@ class Muon():
 
             if self.tftype == 0:
                 # shift by +1 necessary because of the control bit 31
-                self.bitword += (self.trackAddress[0] > 0) << vhdl_dict["BMTF_DETECTOR_SIDE_LOW"] + 1
-                self.bitword += abs(self.trackAddress[0]) << vhdl_dict["BMTF_WHEEL_NO_IN_LOW"] + 1
-                self.bitword += self.trackAddress[1] << vhdl_dict["BMTF_ADDRESS_STATION_1_IN_LOW"] + 1
-                self.bitword += self.trackAddress[2] << vhdl_dict["BMTF_ADDRESS_STATION_2_IN_LOW"] + 1
-                self.bitword += self.trackAddress[3] << vhdl_dict["BMTF_ADDRESS_STATION_3_IN_LOW"] + 1
-                self.bitword += self.trackAddress[4] << vhdl_dict["BMTF_ADDRESS_STATION_4_IN_LOW"] + 1
+                self.bitword += self.trackAddress[0] << vhdl_dict["BMTF_DETECTOR_SIDE_LOW"] + 1
+                self.bitword += self.trackAddress[1] << vhdl_dict["BMTF_WHEEL_NO_IN_LOW"] + 1
+                self.bitword += self.trackAddress[2] << vhdl_dict["BMTF_ADDRESS_STATION_1_IN_LOW"] + 1
+                self.bitword += self.trackAddress[3] << vhdl_dict["BMTF_ADDRESS_STATION_2_IN_LOW"] + 1
+                self.bitword += self.trackAddress[4] << vhdl_dict["BMTF_ADDRESS_STATION_3_IN_LOW"] + 1
+                self.bitword += self.trackAddress[5] << vhdl_dict["BMTF_ADDRESS_STATION_4_IN_LOW"] + 1
             elif self.tftype == 1:
                 self.bitword += self.trackAddress[0] << trackadd_low
             elif self.tftype == 2:

@@ -118,11 +118,11 @@ class TestbenchWriter(object):
 
     def writeBTRKTrackHeadline(self):
         """ documenting the individual track quantities """
-        self.string += ["# BARREL TRACKS\n#TYPE   ETA0  PHI0 QUAL0  SEL0  WHL0 SCT10 SCT20 SCT30 SCT40 EMPT0  ETA1  PHI1 QUAL1  SEL1  WHL1 SCT11 SCT21 SCT31 SCT41 EMPT1  ETA2  PHI2 QUAL2  SEL2  WHL2 SCT12 SCT22 SCT32 SCT42 EMPT2\n"]
+        self.string += ["# BARREL TRACKS\n#TYPE   ETA0  PHI0 QUAL0  SEL0 SIDE0  WHL0 SCT10 SCT20 SCT30 SCT40 EMPT0  ETA1  PHI1 QUAL1  SEL1 SIDE1  WHL1 SCT11 SCT21 SCT31 SCT41 EMPT1  ETA2  PHI2 QUAL2  SEL2 SIDE2  WHL2 SCT12 SCT22 SCT32 SCT42 EMPT2\n"]
 
     def writeBMTFTrackAddressHeadline(self):
         """ documenting the individual track quantities """
-        self.string += ["# BMTF TRACK ADDRESS\n#TYPE     SEL0 WHEEL0 SECT10 SECT20 SECT30 SECT40 QUAL0 EMPT0  SEL1 WHEEL1 SECT11 SECT21 SECT31 SECT41 QUAL1 EMPT1  SEL2 WHEEL2 SECT12 SECT22 SECT32 SECT42 QUAL2 EMPT2\n"]
+        self.string += ["# BMTF TRACK ADDRESS\n#TYPE     SEL0  SIDE0 WHEEL0 SECT10 SECT20 SECT30 SECT40 QUAL0 EMPT0  SEL1  SIDE1 WHEEL1 SECT11 SECT21 SECT31 SECT41 QUAL1 EMPT1  SEL2  SIDE2 WHEEL2 SECT12 SECT22 SECT32 SECT42 QUAL2 EMPT2\n"]
 
     def writeEventHeader(self, n):
         self.string += ["# Event {n}\n".format(n=n)]
@@ -173,7 +173,7 @@ class TestbenchWriter(object):
         """
         Adds the track information to the buffer.
         TAKES:
-            For BTRK track_type: tracks: list of [eta, phi, qual, selector, wheel, sect1, sect2, sect3, sect4, empty]*n_tracks
+            For BTRK track_type: tracks: list of [eta, phi, qual, selector, wheelSide, wheelNum, sect1, sect2, sect3, sect4, empty]*n_tracks
             For other track_types: tracks: list of [eta, phi, qual, empty]*n_tracks
             track_type: track-id = {FTRK+/-, BTRK, OTRK+/-}
         """
@@ -181,7 +181,7 @@ class TestbenchWriter(object):
             if i%3==0:
                 self.string += ["{id:<6}".format(id=track_type)]
             if track_type == 'BTRK':
-                self.string += [" {eta:>5} {phi:>5} {qual:>5} {sel:>5} {wheel:>5} {sect1:>5} {sect2:>5} {sect3:>5} {sect4:>5} {empty:>5}".format(eta=track[0], phi=track[1], qual=track[2], sel=track[3], wheel=track[4], sect1=track[5], sect2=track[6], sect3=track[7], sect4=track[8], empty=track[9])]
+                self.string += [" {eta:>5} {phi:>5} {qual:>5} {sel:>5} {wheelSide:>5} {wheelNum:>5} {sect1:>5} {sect2:>5} {sect3:>5} {sect4:>5} {empty:>5}".format(eta=track[0], phi=track[1], qual=track[2], sel=track[3], wheelSide=track[4], wheelNum=track[5], sect1=track[6], sect2=track[7], sect3=track[8], sect4=track[9], empty=track[10])]
             else:
                 self.string += [" {eta:>5} {phi:>5} {qual:>5} {empty:>5}".format(eta=track[0], phi=track[1], qual=track[2], empty=track[3])]
             if (i+1)%3 == 0:
@@ -191,12 +191,12 @@ class TestbenchWriter(object):
         """
         Adds the BMTF track address information to the buffer.
         TAKES:
-            trackAddresses: list of [selector, wheel, sect1, sect2, sect3, sect4, qual, empty]*n_tracks
+            trackAddresses: list of [selector, wheelSide, WheelNumber, sect1, sect2, sect3, sect4, qual, empty]*n_tracks
         """
         for i, trkAddr in enumerate(trackAddresses):
             if i%3==0:
                 self.string += ["{id:<6}".format(id='BTRKADDR')]
-            self.string += ["{sel:>6} {wheel:>6} {sect1:>6} {sect2:>6} {sect3:>6} {sect4:>6} {qual:>5} {empty:>5}".format(sel=trkAddr[0], wheel=trkAddr[1], sect1=trkAddr[2], sect2=trkAddr[3], sect3=trkAddr[4], sect4=trkAddr[5], qual=trkAddr[6], empty=trkAddr[7])]
+            self.string += ["{sel:>6} {wheelSide:>6} {wheelNum:>6} {sect1:>6} {sect2:>6} {sect3:>6} {sect4:>6} {qual:>5} {empty:>5}".format(sel=trkAddr[0], wheelSide=trkAddr[1], wheelNum=trkAddr[2], sect1=trkAddr[3], sect2=trkAddr[4], sect3=trkAddr[5], sect4=trkAddr[6], qual=trkAddr[7], empty=trkAddr[8])]
             if (i+1)%3 == 0:
                 self.string += ["\n"]
 
@@ -385,7 +385,7 @@ class PatternDumper(object):
             if muon.ptBits == 0: isEmpty = 1
             if track_type == 'BTRK':
                 trkAddr = muon.trackAddress
-                tracks.append([muon.etaBits, muon.phiBits, muon.qualityBits, 0, trkAddr[0], trkAddr[1], trkAddr[2], trkAddr[3], trkAddr[4], isEmpty])
+                tracks.append([muon.etaBits, muon.phiBits, muon.qualityBits, 0, trkAddr[0], trkAddr[1], trkAddr[2], trkAddr[3], trkAddr[4], trkAddr[5], isEmpty])
             else:
                 tracks.append([muon.etaBits, muon.phiBits, muon.qualityBits, isEmpty])
         self._writer.writeTracks(tracks, track_type)
@@ -396,7 +396,7 @@ class PatternDumper(object):
             isEmpty = 0
             if muon.ptBits == 0: isEmpty = 1
             trkAddr = muon.trackAddress
-            trackAddresses.append([0, trkAddr[0], trkAddr[1], trkAddr[2], trkAddr[3], trkAddr[4], muon.qualityBits, isEmpty])
+            trackAddresses.append([0, trkAddr[0], trkAddr[1], trkAddr[2], trkAddr[3], trkAddr[4], trkAddr[5], muon.qualityBits, isEmpty])
         self._writer.writeBMTFTrackAddress(trackAddresses)
 
     def writeMuonBasedInputBX(self, bar_muons, fwdp_muons, fwdn_muons, ovlp_muons, ovln_muons, calosums, addTracks = False, addBXCounter = False):
