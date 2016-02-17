@@ -16,6 +16,7 @@ def parse_options():
     parser.add_argument("--txt", dest="txt", help='Write LUT in .txt format (one entry per line, address value)', default=False, action='store_true')
     parser.add_argument("--mifb", dest="mifb", help='Write LUT in binary .mif format (one entry per line, value in binary with leading zeros)', default=False, action='store_true')
     parser.add_argument("--mifh", dest="mifh", help='Write LUT in hex .mif format (one entry per line, value in hex with leading zeros)', default=False, action='store_true')
+    parser.add_argument("--xml", dest="xml", help='Write LUT in .xml format (all values in one line)', default=False, action='store_true')
     
     return parser.parse_args()
 
@@ -103,6 +104,20 @@ def write_dottxt_file(lut, outFileName):
             payload += '{addr} {value}\n'.format(addr=addr, value=lut.lookup(addr))
         outFile.write(header + payload)
 
+def write_dotxml_file(lut, outFileName):
+    with open(outFileName, 'w') as outFile:
+        header = '<module>\n'
+        header += '  <context id="ugmt.processors">\n'
+        header += '    <param id="{lutId}" type="vector:uint">\n'.format(lutId=outFileName.split('/')[-1].replace('.xml', ''))
+        header += '      <!-- version {version}, input width {inputWidth}, output width {outputWidth} -->\n'.format(version=lut.getVersion(), inputWidth=sum(lut.getInputWidths()), outputWidth=lut.getOutputWidth())
+        trailer = '\n    </param>\n'
+        trailer += '  </context>\n'
+        trailer += '</module>'
+        payload = '      '
+        for addr in range(lut.getNEntries()):
+            payload += '{value}, '.format(value=lut.lookup(addr))
+        outFile.write(header + payload[:-2] + trailer)
+
 def get_lut_from_file(filename):
     if filename.endswith('.lut'):
         lut = read_dotlut_file(filename)
@@ -137,6 +152,9 @@ def main():
                 elif options.mifh:
                     print 'Writing converted LUT to file {file}'.format(file=outFile + '.mif')
                     write_dotmif_file(lut, outFile + '.mif', 'h')
+                if options.xml:
+                    print 'Writing converted LUT to file {file}'.format(file=outFile + '.xml')
+                    write_dotxml_file(lut, outFile + '.xml')
         else:
             print 'Begin converting file {file}'.format(file=options.inPath)
             lut = get_lut_from_file(options.inPath)
@@ -155,6 +173,9 @@ def main():
             elif options.mifh:
                 print 'Writing converted LUT to file {file}'.format(file=outFile + '.mif')
                 write_dotmif_file(lut, outFile + '.mif', 'h')
+            if options.xml:
+                print 'Writing converted LUT to file {file}'.format(file=outFile + '.xml')
+                write_dotxml_file(lut, outFile + '.xml')
 
         print 'Finished converting LUT files'
     else:
