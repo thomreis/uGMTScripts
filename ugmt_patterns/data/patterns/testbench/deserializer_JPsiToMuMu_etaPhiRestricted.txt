@@ -55,7 +55,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   285    44   195     1     0    15   300     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -243,7 +243,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0    67    44   189     1     0    15    82     0
 EMTF+      1    11   103   168     1     0    10    21     0
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -431,7 +431,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -619,7 +619,7 @@ CALO24  0  0  0  4 16 16 16 16  4  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  4  4  4  4  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   179    97   143     1     0    14   193     0
 EMTF+      1   109    86   138     1     0    15   124     0
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -807,7 +807,7 @@ CALO24  2  2  2  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0    25    55   107     1     0     6    31     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -995,7 +995,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   124    87   162     1     0    14   138     0
 EMTF+      1    29   107   166     1     0    14    43     0
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -1183,7 +1183,7 @@ CALO24  0  0  0  0  0  0  2  4  4  4  4  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -1371,7 +1371,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -1559,7 +1559,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -1747,7 +1747,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   123   110   210     1     0    14   137     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -1935,7 +1935,7 @@ CALO24  0  0  0  0  0  0  8  8  8  8  4  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  6  6  6  6  3  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0    62   120   151     1     0     7    69     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -2123,7 +2123,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   128    72   182     1     0    15   143     0
 EMTF+      1    49    82   193     1     0    15    64     0
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -2311,7 +2311,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   125    25   182     1     0    15   140     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -2499,7 +2499,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -2687,7 +2687,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0    13    50   111     1     0    15    28     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -2875,7 +2875,7 @@ CALO24  0  0  1  2  2  2  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  2  4  4  4  4  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  2  4  4  4  4  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  1  2  2  2  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   150    70   217     1     0    15   165     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -3063,7 +3063,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0    76   119   176     1     0    15    91     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -3251,7 +3251,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -3439,7 +3439,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -3627,7 +3627,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   130    39   217     1     0    15   145     0
 EMTF+      1    20    24   203     1     0    12    32     0
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -3815,7 +3815,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0    16    41   180     1     0    15    31     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -4003,7 +4003,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -4191,7 +4191,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -4379,7 +4379,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -4567,7 +4567,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -4755,7 +4755,7 @@ CALO24  0  0  0  2  8  8  8  8  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  2  8  8  8  8  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  2  8  8  8  8  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  1  4  4  4  4  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   100    81   184     1     0    15   115     0
 EMTF+      1   139    91   184     1     0    15   154     0
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -4943,7 +4943,7 @@ CALO24  0  0  0  2  8  8  8  8  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  2  8  8  8  8  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  2  8  8  8  8  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  1  4  4  4  4  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   182    92   180     1     0    15   197     0
 EMTF+      1   107    83   187     1     0    15   122     0
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -5131,7 +5131,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -5319,7 +5319,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0    21    48   117     1     0    11    32     0
 EMTF+      1    56    29   122     1     0     7    63     0
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -5507,7 +5507,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0    88    98   110     1     0     7    95     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -5695,7 +5695,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -5883,7 +5883,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   238    79   199     1     0    12   250     0
 EMTF+      1    73    95   197     1     0    11    84     0
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -6071,7 +6071,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0    54    91   103     1     0     6    60     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -6259,7 +6259,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -6447,7 +6447,7 @@ CALO24  0  0  0  0  0  1  2  2  2  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0    14   109   135     1     0    15    29     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -6635,7 +6635,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0    21    44   109     1     0     6    27     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -6823,7 +6823,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -7011,7 +7011,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   314    73   126     1     0    15   329     0
 EMTF+      1    19   114   122     1     0    15    34     0
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -7199,7 +7199,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -7387,7 +7387,7 @@ CALO24  0  0  0  0  2  8  8  8  8  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  2  8  8  8  8  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  2  8  8  8  8  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  1  4  4  4  4  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0    22   106   207     1     0    15    37     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -7575,7 +7575,7 @@ CALO24  6 12 12 12 12  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  3  6  6  6  6  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   194    39   145     1     0    11   205     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -7763,7 +7763,7 @@ CALO24  0  0  0  4 16 16 16 16  4  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  4 16 16 16 16  4  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  4 16 16 16 16  4  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  2  8  8  8  8  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   165    88   180     1     0    15   180     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -7951,7 +7951,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0    44    71   113     1     0    15    59     0
 EMTF+      1   135   114   114     1     0    15   150     0
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -8139,7 +8139,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   234    30   116     1     0    13   247     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -8327,7 +8327,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -8515,7 +8515,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0    68    74   219     1     0    15    83     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -8703,7 +8703,7 @@ CALO24  0  0 31 31 31 31 20  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0 20 20 20 20 10  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   113    57   146     1     0    11   124     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -8891,7 +8891,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -9079,7 +9079,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -9267,7 +9267,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -9455,7 +9455,7 @@ CALO24  0  0  0  0  2  6  6  6  5  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0    54    90   131     1     0    15    69     0
 EMTF+      1    93   109   135     1     0     6    99     0
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -9643,7 +9643,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   199    32   132     1     0    15   214     0
 EMTF+      1    24    40   132     1     0    15    39     0
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -9831,7 +9831,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0    44    45   174     1     0    15    59     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -10019,7 +10019,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -10207,7 +10207,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0    14    42   177     1     0    13    27     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -10395,7 +10395,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0    20    65   182     1     0    15    35     0
 EMTF+      1    71    79   205     1     0    15    86     0
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -10583,7 +10583,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -10771,7 +10771,7 @@ CALO24  0  4 16 16 16 16  4  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  4 16 16 16 16  4  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  4 16 16 16 16  4  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  2  8  8  8  8  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   126    55   182     1     0    15   141     0
 EMTF+      1     9    33   217     1     0    10    19     0
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -10959,7 +10959,7 @@ CALO24  0  0  0  0  0  0  1  2  2  2  2  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0    76    66   124     1     0    15    91     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -11147,7 +11147,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -11335,7 +11335,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -11523,7 +11523,7 @@ CALO24  0  0  0  0  0  0  1  2  2  2  2  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -11711,7 +11711,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   219   113   205     1     0    15   234     0
 EMTF+      1    67   114   205     1     0    15    82     0
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -11899,7 +11899,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   156    81   212     1     0    15   171     0
 EMTF+      1    40    78   207     1     0    15    55     0
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -12087,7 +12087,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  4  4  4  4  2  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  2  2  2  2  1  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0    24    76   207     1     0    15    39     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -12275,7 +12275,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -12463,7 +12463,7 @@ CALO24  0  2  8  8  8  8  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  2  8  8  8  8  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  2  8  8  8  8  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  1  4  4  4  4  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0    10    58   199     1     0    15    25     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -12651,7 +12651,7 @@ CALO24  0  0  0  0  0  0  0  1  2  2  2  2  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -12839,7 +12839,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -13027,7 +13027,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  2  4  4  4  4  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  2  4  4  4  4  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -13215,7 +13215,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  2  4  4  4  4  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -13403,7 +13403,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   274    64   169     1     0    15   289     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -13591,7 +13591,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  4  4  4  4  2  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  2  2  2  2  1  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -13779,7 +13779,7 @@ CALO24  0  0  0  0  0  0  0  5  6  6  6  4  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -13967,7 +13967,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -14155,7 +14155,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0    98    44   130     1     0    15   113     0
 EMTF+      1   198    51   130     1     0    15   213     0
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -14343,7 +14343,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -14531,7 +14531,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -14719,7 +14719,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -14907,7 +14907,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -15095,7 +15095,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -15283,7 +15283,7 @@ CALO24  2  2  2  2  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   217    24   174     1     0    15   232     0
 EMTF+      1    10    89   193     1     0     7    17     0
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -15471,7 +15471,7 @@ CALO24  0  0  0  0  0  0  2  4  4  4  4  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  2  4  4  4  4  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0    12    83   153     1     0     5    17     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -15659,7 +15659,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   129    65   201     1     0    15   144     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -15847,7 +15847,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -16035,7 +16035,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -16223,7 +16223,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   100   102   105     1     0     6   106     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -16411,7 +16411,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   117    62   124     1     0    15   132     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -16599,7 +16599,7 @@ CALO24  0  0  0  0  0  1  2  2  2  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -16787,7 +16787,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -16975,7 +16975,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -17163,7 +17163,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0    41   106   186     1     0    15    56     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -17351,7 +17351,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -17539,7 +17539,7 @@ CALO24  0  0  2  8  8  8  8  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  2  8  8  8  8  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  2  8  8  8  8  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   122    67   172     1     0    15   137     0
 EMTF+      1   376    74   172     1     0    15   391     0
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -17727,7 +17727,7 @@ CALO24  4  4  4  4  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  2  2  2  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -17915,7 +17915,7 @@ CALO24  0  0  0  2  8  8  8  8  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  2  8  8  8  8  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  2  8  8  8  8  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  1  4  4  4  4  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   225    94   179     1     0    13   238     0
 EMTF+      1    37    76   176     1     0    13    50     0
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -18103,7 +18103,7 @@ CALO24  0 22 31 31 31 31  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0 11 18 18 18 16  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   511    48   146     1     0    10   521     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -18291,7 +18291,7 @@ CALO24  0  8  8  8  8  4  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  4  4  4  4  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   320    41   151     1     0    15   335     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -18479,7 +18479,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -18667,7 +18667,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   237    76   195     1     0    13   250     0
 EMTF+      1    13    52   212     1     0    15    28     0
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -18855,7 +18855,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   189    92   164     1     0    15   204     0
 EMTF+      1     8   104   176     1     0    14    22     0
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -19043,7 +19043,7 @@ CALO24  0  0  0  0  6  6  6  6  3  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0    86    92   134     1     0    15   101     0
 EMTF+      1    86    95   134     1     0    15   101     0
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -19231,7 +19231,7 @@ CALO24  0  0  0  0  0  2 10 12 12 12  6  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  2 10 12 12 12  6  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  2  8  8  8  8  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0    15    84   172     1     0    15    30     0
 EMTF+      1   135   120   176     1     0    11   146     0
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -19419,7 +19419,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   128    59   205     1     0    15   143     0
 EMTF+      1   187    70   205     1     0    15   202     0
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -19607,7 +19607,7 @@ CALO24  0  0  0  2  8  8  8  8  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  2  8  8  8  8  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  2  8  8  8  8  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   325    94   171     1     0    15   340     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -19795,7 +19795,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -19983,7 +19983,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   220    76   112     1     0    15   235     0
 EMTF+      1    55    64   107     1     0     6    61     0
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -20171,7 +20171,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -20359,7 +20359,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -20547,7 +20547,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -20735,7 +20735,7 @@ CALO24  2  2  2  2  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   214   119   182     1     0    15   229     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -20923,7 +20923,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   234   102   166     1     0    10   244     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -21111,7 +21111,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -21299,7 +21299,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0    18   102   125     1     0    15    33     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -21487,7 +21487,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -21675,7 +21675,7 @@ CALO24  2  2  2  2  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -21863,7 +21863,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  4  4  4  4  2  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  4  4  4  4  2  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -22051,7 +22051,7 @@ CALO24  0  0  0  0  0  4  4  4  4  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  4  4  4  4  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0    82   107   158     1     0    13    95     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -22239,7 +22239,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -22427,7 +22427,7 @@ CALO24  0  0  0  4  6  6  6  4  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   102    75   138     1     0    15   117     0
 EMTF+      1    50    93   130     1     0    15    65     0
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -22615,7 +22615,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -22803,7 +22803,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -22991,7 +22991,7 @@ CALO24  0  0  0  0  0  2  8  8  8  8  2  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  2  8  8  8  8  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  2  8  8  8  8  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  1  4  4  4  4  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   196   116   197     1     0    15   211     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -23179,7 +23179,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -23367,7 +23367,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   117    91   123     1     0    15   132     0
 EMTF+      1    32   109   114     1     0    15    47     0
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -23555,7 +23555,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0    21    38   109     1     0     7    28     0
 EMTF+      1    59    30   102     1     0     6    65     0
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -23743,7 +23743,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -23931,7 +23931,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -24119,7 +24119,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0    58    56   118     1     0    15    73     0
 EMTF+      1   114    64   117     1     0    15   129     0
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -24307,7 +24307,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -24495,7 +24495,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -24683,7 +24683,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -24871,7 +24871,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  4  4  4  4  2  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  4  4  4  4  2  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -25059,7 +25059,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -25247,7 +25247,7 @@ CALO24  0 12 12 12 12  6  0  0  0  4  4  4  4  2  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  2  2  2  2  1  0  0  0  4  4  4  4  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  4  4  4  4  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   190    46   140     1     0    15   205     0
 EMTF+      1    26    38   148     1     0    11    37     0
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -25435,7 +25435,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -25623,7 +25623,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -25811,7 +25811,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -25999,7 +25999,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0    19   115   124     1     0    15    34     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -26187,7 +26187,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -26375,7 +26375,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0    12    78   161     1     0    14    26     0
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -26563,7 +26563,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -26751,7 +26751,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -26939,7 +26939,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -27127,7 +27127,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -27315,7 +27315,7 @@ CALO24  2  4 10 12 12  8  6  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  2  4  4  4  4  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   162    56   134     1     0    15   177     0
 EMTF+      1   127    69   134     1     0    15   142     0
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -27503,7 +27503,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -27691,7 +27691,7 @@ CALO24  0  0  4  8  8  8  8  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0   162    65   138     1     0    15   177     0
 EMTF+      1    25    77   129     1     0    15    40     0
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -27879,7 +27879,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
@@ -28067,7 +28067,7 @@ CALO24  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  
 CALO25  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO26  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 CALO27  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO)
+#TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
 EMTF+      0     0     0     0     0     0     0     0     1
 EMTF+      1     0     0     0     0     0     0     0     1
 EMTF+      2     0     0     0     0     0     0     0     1
