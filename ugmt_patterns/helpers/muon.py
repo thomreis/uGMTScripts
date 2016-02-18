@@ -64,6 +64,8 @@ class Muon():
         if mu_type == "OUT":
             iso_low = vhdl_dict["ISO_OUT_LOW"]
             iso_high = vhdl_dict["ISO_OUT_HIGH"]
+            idx_low = vhdl_dict["IDX_OUT_LOW"]
+            idx_high = vhdl_dict["IDX_OUT_HIGH"]
         else:
             trackadd_low = vhdl_dict["BMTF_ADDRESS_STATION_4_IN_LOW"] - 2
             trackadd_high = vhdl_dict["BMTF_DETECTOR_SIDE_HIGH"] + 4
@@ -80,8 +82,10 @@ class Muon():
             self.globPhiBits = self.phiBits
             if mu_type == "OUT":
                 self.Iso = bithlp.get_shifted_subword(self.bitword, iso_low, iso_high)
+                self.tfMuonIndex = bithlp.get_shifted_subword(self.bitword, idx_low, idx_high)
             else:
                 self.Iso = 0
+                self.tfMuonIndex = -1
                 if self.local_link != -1:
                     self.globPhiBits = self.calcGlobalPhi(self.ptBits, self.tftype, self.local_link)
 
@@ -97,9 +101,11 @@ class Muon():
                 self.Iso = obj.hwIso()
                 self.rank = obj.hwRank()
                 self.Sysign = obj.hwCharge() + (obj.hwChargeValid() << 1)
+                self.tfMuonIndex = obj.tfMuonIndex()
 
             else:
                 self.Iso = 0
+                self.tfMuonIndex = -1
                 self.rank = 0
                 self.Sysign = obj.hwSign() + (obj.hwSignValid() << 1)
                 # shift by +1 necessary because of the control bit 31

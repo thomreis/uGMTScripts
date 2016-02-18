@@ -98,7 +98,7 @@ class TestbenchWriter(object):
 
     def writeMuonHeadline(self):
         """ documenting the individual muon quantities """
-        self.string += ["#{id:<5} {rank:>5} {pt:>5} {phi:>5} {eta:>5} {charge:>5} {charge_valid:>5} {quality:>5} {sort:>5} {empty:>5} {iso:>5}\n".format(
+        self.string += ["#{id:<5} {rank:>5} {pt:>5} {phi:>5} {eta:>5} {charge:>5} {charge_valid:>5} {quality:>5} {sort:>5} {empty:>5} {iso:>5} {idx:>5}\n".format(
                                 id="TYPE",
                                 rank="POS",
                                 pt="PT",
@@ -110,6 +110,7 @@ class TestbenchWriter(object):
                                 sort="RANK",
                                 empty="EMPT",
                                 iso="(ISO)",
+                                idx="(IDX)",
                             )]
 
     def writeTrackHeadline(self):
@@ -165,6 +166,7 @@ class TestbenchWriter(object):
                     )
         if addIso:
             tmp_string += " {iso:>5}".format(iso=mu.Iso)
+            tmp_string += " {idx:>5}".format(idx=mu.tfMuonIndex)
 
         tmp_string += "\n"
         self.string += [tmp_string]
