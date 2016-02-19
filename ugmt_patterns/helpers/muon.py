@@ -135,8 +135,11 @@ class Muon():
             self.bitword += (unsigned_eta << eta_low)
             self.bitword += (self.phiBits << phi_low)
 
-            if mu_type == "OUT" and self.Iso > 0:
-                self.bitword += (self.Iso << iso_low)
+            if mu_type == "OUT":
+                if self.Iso > 0:
+                    self.bitword += (self.Iso << iso_low)
+                if self.tfMuonIndex > 0:
+                    self.bitword += (self.tfMuonIndex << idx_low)
 
             if self.tftype == 0:
                 # shift by +1 necessary because of the control bit 31

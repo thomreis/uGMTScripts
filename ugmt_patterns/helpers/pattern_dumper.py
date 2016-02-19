@@ -141,8 +141,8 @@ class TestbenchWriter(object):
         TAKES:  mu          Muon object
                 mu_type     muon type (BMTF, EMTF+/-, OMTF+/-, EIMD, BIMD, OIMD, OUT)
                 rank        relative position of the muon (IMD: 0-23, OUT: 0-7, EMTF/OMTF: 0-37, BMTF: 0-35)
-                addIso      whether to add isolation info (should only be done for OUT)
-        Adds to self.string "ID N PT PHI ETA CHARGE CHARGE_VALID QUALITY SORT EMPTY (ISO)"
+                addIso      whether to add isolation info and muon index (should only be done for OUT)
+        Adds to self.string "ID N PT PHI ETA CHARGE CHARGE_VALID QUALITY SORT EMPTY (ISO) (IDX)"
         """
         isempty = 0
         if mu.ptBits == 0: isempty = 1
@@ -239,8 +239,8 @@ class TestvectorWriter(object):
         TAKES:  mu          Muon object
                 mu_type     muon type (BMTF, EMTF+/-, OMTF+/-, EIMD, BIMD, OIMD, OUT)
                 rank        relative position of the muon (IMD: 0-23, OUT: 0-7, EMTF/OMTF: 0-37, BMTF: 0-35)
-                addIso      whether to add isolation info (should only be done for OUT)
-        Adds to string "ID N PT PHI ETA CHARGE CHARGE_VALID QUALITY SORT EMPTY (ISO) (TWR)"
+                addIso      whether to add isolation info and muon index(should only be done for OUT)
+        Adds to string "ID N PT PHI ETA CHARGE CHARGE_VALID QUALITY SORT EMPTY (ISO) (IDX) (TWR)"
         """
         if self.muonCounter == 0:
             self.string += ["\n{bx:0>4}".format(bx=self.bxCounter)]
