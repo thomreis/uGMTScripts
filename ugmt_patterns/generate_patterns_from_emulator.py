@@ -27,10 +27,10 @@ from helpers.options import parse_options, discover_emu_files
 
 
 def get_muon_list_out(emu_product, mu_type, vhdl_dict, nexpected=8):
-    mulist = [Muon(vhdl_dict, mu_type="OUT", bitword=0)]*nexpected
+    mulist = [Muon(vhdl_dict, mu_type, bitword=0)]*nexpected
     for i in xrange(emu_product.size(0)):
         if emu_product.at(0, i).hwPt() > 0:
-            mu_tmp = Muon(vhdl_dict, mu_type="OUT", obj=emu_product.at(0, i))
+            mu_tmp = Muon(vhdl_dict, mu_type, obj=emu_product.at(0, i))
             mulist[i] = mu_tmp
     return mulist
 

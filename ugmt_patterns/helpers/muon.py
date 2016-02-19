@@ -11,7 +11,7 @@ class Muon():
         ctor:
         TAKES:
             vhdl_dict   as returned by ../../tools/vhdl.VHDLConstantsParser
-            mu_type     either IN (inputs) or OUT (intermediates/outputs)
+            mu_type     either IN (inputs), OUT (outputs), or IMD (intermediates)
             bitword     can be None or a 64bit integer (for HW muons)
             obj         can be None or one of the emulator objects (for emulator muons)
             link        integer representing link the muon was received / is sent (HW only)
@@ -43,25 +43,29 @@ class Muon():
                 self.local_link -= vhdl_dict["EMTF_NEG_LOW"]
                 self.tftype = 2
 
-        pt_low = vhdl_dict["PT_{t}_LOW".format(t=mu_type)]
-        pt_high = vhdl_dict["PT_{t}_HIGH".format(t=mu_type)]
+        if mu_type == 'IMD' or mu_type == 'OUT':
+            bitword_type = 'OUT'
+        else:
+            bitword_type = 'IN'
+        pt_low = vhdl_dict["PT_{t}_LOW".format(t=bitword_type)]
+        pt_high = vhdl_dict["PT_{t}_HIGH".format(t=bitword_type)]
 
-        sysign_low = vhdl_dict["SIGN_{t}".format(t=mu_type)]
-        sysign_high = vhdl_dict["VALIDSIGN_{t}".format(t=mu_type)]
+        sysign_low = vhdl_dict["SIGN_{t}".format(t=bitword_type)]
+        sysign_high = vhdl_dict["VALIDSIGN_{t}".format(t=bitword_type)]
 
         trackadd_low = 0
         trackadd_high = 0
 
-        qual_low = vhdl_dict["QUAL_{t}_LOW".format(t=mu_type)]
-        qual_high = vhdl_dict["QUAL_{t}_HIGH".format(t=mu_type)]
+        qual_low = vhdl_dict["QUAL_{t}_LOW".format(t=bitword_type)]
+        qual_high = vhdl_dict["QUAL_{t}_HIGH".format(t=bitword_type)]
 
-        eta_low = vhdl_dict["ETA_{t}_LOW".format(t=mu_type)]
-        eta_high = vhdl_dict["ETA_{t}_HIGH".format(t=mu_type)]
+        eta_low = vhdl_dict["ETA_{t}_LOW".format(t=bitword_type)]
+        eta_high = vhdl_dict["ETA_{t}_HIGH".format(t=bitword_type)]
 
-        phi_low = vhdl_dict["PHI_{t}_LOW".format(t=mu_type)]
-        phi_high = vhdl_dict["PHI_{t}_HIGH".format(t=mu_type)]
+        phi_low = vhdl_dict["PHI_{t}_LOW".format(t=bitword_type)]
+        phi_high = vhdl_dict["PHI_{t}_HIGH".format(t=bitword_type)]
 
-        if mu_type == "OUT":
+        if bitword_type == "OUT":
             iso_low = vhdl_dict["ISO_OUT_LOW"]
             iso_high = vhdl_dict["ISO_OUT_HIGH"]
             idx_low = vhdl_dict["IDX_OUT_LOW"]
@@ -97,7 +101,7 @@ class Muon():
                 self.globPhiBits = gPhi
             else:
                 self.globPhiBits = obj.hwPhi()
-            if mu_type == "OUT":
+            if bitword_type == "OUT":
                 self.Iso = obj.hwIso()
                 self.rank = obj.hwRank()
                 self.Sysign = obj.hwCharge() + (obj.hwChargeValid() << 1)
@@ -135,11 +139,10 @@ class Muon():
             self.bitword += (unsigned_eta << eta_low)
             self.bitword += (self.phiBits << phi_low)
 
-            if mu_type == "OUT":
-                if self.Iso > 0:
-                    self.bitword += (self.Iso << iso_low)
-                if self.tfMuonIndex > 0:
-                    self.bitword += (self.tfMuonIndex << idx_low)
+            if bitword_type == "OUT" and self.Iso > 0:
+                self.bitword += (self.Iso << iso_low)
+            if mu_type == "OUT" and self.tfMuonIndex > 0:
+                self.bitword += (self.tfMuonIndex << idx_low)
 
             if self.tftype == 0:
                 # shift by +1 necessary because of the control bit 31
