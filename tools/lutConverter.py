@@ -17,6 +17,7 @@ def parse_options():
     parser.add_argument("--mifb", dest="mifb", help='Write LUT in binary .mif format (one entry per line, value in binary with leading zeros)', default=False, action='store_true')
     parser.add_argument("--mifh", dest="mifh", help='Write LUT in hex .mif format (one entry per line, value in hex with leading zeros)', default=False, action='store_true')
     parser.add_argument("--xml", dest="xml", help='Write LUT in .xml format (all values in one line)', default=False, action='store_true')
+    parser.add_argument("--json", dest="json", help='Write LUT in .json format (all values in one line)', default=False, action='store_true')
     
     return parser.parse_args()
 
@@ -118,6 +119,23 @@ def write_dotxml_file(lut, outFileName):
             payload += '{value}, '.format(value=lut.lookup(addr))
         outFile.write(header + payload[:-2] + trailer)
 
+def write_dotjson_file(lut, outFileName):
+    with open(outFileName, 'w') as outFile:
+        header = '{\n'
+        header += '"NAME"        : "{lutId}",\n'.format(lutId=outFileName.split('/')[-1].replace('.json', ''))
+        header += '"VERSION"     : "{version}",\n'.format(version=lut.getVersion())
+        header += '"INPUTWIDTH"  : "{inputWidth}",\n'.format(inputWidth=sum(lut.getInputWidths()))
+        header += '"OUTPUTWIDTH" : "{outputWidth}",\n'.format(outputWidth=lut.getOutputWidth())
+        header += '"INSTANCES"   : "List (space separated) of instances of this LUT (differing contents but same in/output)",\n'
+        header += '"OUTPUTS"     : "List (space separated) of outputs in format <output_name>(<output_width>)",\n'
+        header += '"IPBUS_ADD"   : "Address for access via IPBus",\n'
+        header += '"CONTENT_X"   : "List (space separated) of outputs from packed int for zero-indexed instance X",\n'
+        trailer = ']\n}'
+        payload = '"CONTENT"     : [ '
+        for addr in range(lut.getNEntries()):
+            payload += '{value}, '.format(value=lut.lookup(addr))
+        outFile.write(header + payload[:-2] + trailer)
+
 def get_lut_from_file(filename):
     if filename.endswith('.lut'):
         lut = read_dotlut_file(filename)
@@ -155,6 +173,9 @@ def main():
                 if options.xml:
                     print 'Writing converted LUT to file {file}'.format(file=outFile + '.xml')
                     write_dotxml_file(lut, outFile + '.xml')
+                if options.json:
+                    print 'Writing converted LUT to file {file}'.format(file=outFile + '.json')
+                    write_dotjson_file(lut, outFile + '.json')
         else:
             print 'Begin converting file {file}'.format(file=options.inPath)
             lut = get_lut_from_file(options.inPath)
@@ -176,6 +197,9 @@ def main():
             if options.xml:
                 print 'Writing converted LUT to file {file}'.format(file=outFile + '.xml')
                 write_dotxml_file(lut, outFile + '.xml')
+            if options.json:
+                print 'Writing converted LUT to file {file}'.format(file=outFile + '.json')
+                write_dotjson_file(lut, outFile + '.json')
 
         print 'Finished converting LUT files'
     else:
