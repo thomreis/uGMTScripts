@@ -7724,8 +7724,8 @@ ETRK-      0     0     0     1     0     0     0     1     0     0     0     1
 ETRK-      0     0     0     1     0     0     0     1     0     0     0     1
 # Expected emulator output
 #TYPE    POS    PT   PHI   ETA   CHR  VCHR  QUAL  RANK  EMPT (ISO) (IDX)
-EIMD       0    16    15   130     1     0     8    27     0
-EIMD       1    21    44   109     1     0     4    27     0
+EIMD       0    21    44   109     1     0     4    27     0
+EIMD       1    16    15   130     1     0     8    27     0
 EIMD       2     0     0     0     0     0     0     0     1
 EIMD       3     0     0     0     0     0     0     0     1
 OIMD       4     0     0     0     0     0     0     0     1
@@ -7748,8 +7748,8 @@ EIMD      20     0     0     0     0     0     0     0     1
 EIMD      21     0     0     0     0     0     0     0     1
 EIMD      22     0     0     0     0     0     0     0     1
 EIMD      23     0     0     0     0     0     0     0     1
-OUT        0    16    15   130     1     0     8    27     0     3    15
-OUT        1    21    44   109     1     0     4    27     0     3     0
+OUT        0    21    44   109     1     0     4    27     0     3     0
+OUT        1    16    15   130     1     0     8    27     0     3    15
 OUT        2     0     0     0     0     0     0     0     1     0     0
 OUT        3     0     0     0     0     0     0     0     1     0     0
 OUT        4     0     0     0     0     0     0     0     1     0     0
