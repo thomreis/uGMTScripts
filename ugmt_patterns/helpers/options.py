@@ -15,7 +15,7 @@ def parse_options(description = ""):
     parser.add_argument("--nodebug", dest="nodebug", help='Whether debug output is in the file (intermediate muons, ranks and calo energies)', default=False, action='store_true')
     parser.add_argument('--verbose', dest='verbose', help='Additional output about muons per event', default=False, action='store_true')
     parser.add_argument('--veryverbose', dest="detaildump", help="Even more output", default=False, action="store_true")
-    parser.add_argument("--delay", dest="delay", help="Specify how many empty frames should be written to mp7-pattern", default=4, type=int)
+    parser.add_argument("--delay", dest="delay", help="Specify how many empty frames should be written to mp7-pattern", default=5, type=int)
     parser.add_argument("--gtdumps", dest="gtdumps", help="Specify a folder containing files that represent the GT-spy buffer dumps", default="", type=str)
     parser.add_argument("--gtoffset", dest="gtoffset", help="Specify the offset for the GT-spy buffer (leading comma)", default=31, type=int)
     
