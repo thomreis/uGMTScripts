@@ -335,8 +335,12 @@ class PatternDumper(object):
         for x in range(6):
             frames[x] = [0]*72
 
-        self.writeMuonsToFrames(frames, "OUT", out_muons, 2, 0, 2)
-        self.writeMuonsToFrames(frames, "IMD", imd_muons, 3, 0)
+        nOutSets = self.vhdl_dict["OUTPUT_MULTIPLIER"]
+        nOutChans = self.vhdl_dict["NUM_OUT_CHANS"]
+
+        for i in range(nOutSets):
+            self.writeMuonsToFrames(frames, "OUT", out_muons, 2, i*nOutChans, 2)
+        self.writeMuonsToFrames(frames, "IMD", imd_muons, 3, (nOutSets-1)*nOutChans)
 
         for x, frame in frames.iteritems():
             self._writer.writeFrame(frame, ftype="out")
