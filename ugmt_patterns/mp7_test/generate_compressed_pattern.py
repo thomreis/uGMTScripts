@@ -155,6 +155,7 @@ def main():
             event.getByLabel("simOmtfDigis", "OMTF", ovl_handle)
 
             event.getByLabel("simGmtCaloSumDigis", "TriggerTowerSums", calo_handle)
+            #event.getByLabel("simGmtCaloSumDigis", "TriggerTower2x2s", calo_handle)
             get_label_time = time.time() - evt_start
             calo_sums_raw = calo_handle.product()
             calo_sums = get_calo_list(calo_sums_raw)
