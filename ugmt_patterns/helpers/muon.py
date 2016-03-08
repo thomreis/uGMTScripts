@@ -129,6 +129,7 @@ class Muon():
             self.phiBits = obj.hwPhi()
             self.etaBits = obj.hwEta()
             unsigned_eta = bithlp.twos_complement_to_unsigned(obj.hwEta(), 9)
+            unsigned_phi = bithlp.twos_complement_to_unsigned(obj.hwPhi(), 8)
             self.qualityBits = obj.hwQual()
             self.ptBits = obj.hwPt()
 
@@ -137,7 +138,7 @@ class Muon():
             self.bitword += (self.qualityBits << qual_low)
             self.bitword += (self.Sysign << sysign_low)
             self.bitword += (unsigned_eta << eta_low)
-            self.bitword += (self.phiBits << phi_low)
+            self.bitword += (unsigned_phi << phi_low)
 
             if bitword_type == "OUT" and self.Iso > 0:
                 self.bitword += (self.Iso << iso_low)
