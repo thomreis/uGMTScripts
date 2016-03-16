@@ -152,8 +152,12 @@ def main():
             event.getByLabel("simBmtfDigis", "BMTF", bar_handle)
             event.getByLabel("simEmtfDigis", "EMTF", fwd_handle)
             event.getByLabel("simOmtfDigis", "OMTF", ovl_handle)
+            #event.getByLabel("gmtStage2Digis", "BMTF", bar_handle)
+            #event.getByLabel("gmtStage2Digis", "EMTF", fwd_handle)
+            #event.getByLabel("gmtStage2Digis", "OMTF", ovl_handle)
 
             event.getByLabel("simGmtCaloSumDigis", "TriggerTowerSums", calo_handle)
+            #event.getByLabel("emptyCaloCollsProducer", "EmptyTriggerTowerSums", calo_handle)
             #event.getByLabel("simGmtCaloSumDigis", "TriggerTower2x2s", calo_handle)
             get_label_time = time.time() - evt_start
             calo_sums_raw = calo_handle.product()
