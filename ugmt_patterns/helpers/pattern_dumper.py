@@ -58,7 +58,7 @@ class TestbenchWriter(object):
 # Pattern for testbench of the uGMT algo block
 # Data format of muons:
 # ID N PT PHI ETA CHARGE CHARGE_VALID QUALITY SORT EMPTY (ISO)
-# where ID = {FWD+/-, OVL+/-, BAR, OUT, FIMD, BIMD, OIMD}
+# where ID = {EMTF+/-, OMTF+/-, BMTF, OUT, EIMD, BIMD, OIMD}
 # N is the rank for IMD / OUT and the link for inputs.
 # ISO is optional and only present for OUT
 #
@@ -98,7 +98,7 @@ class TestbenchWriter(object):
 
     def writeMuonHeadline(self):
         """ documenting the individual muon quantities """
-        self.string += ["#{id:<5} {rank:>5} {pt:>5} {phi:>5} {eta:>5} {charge:>5} {charge_valid:>5} {quality:>5} {sort:>5} {empty:>5} {iso:>5}\n".format(
+        self.string += ["#{id:<5} {rank:>5} {pt:>5} {phi:>5} {eta:>5} {charge:>5} {charge_valid:>5} {quality:>5} {sort:>5} {empty:>5} {iso:>5} {idx:>5}\n".format(
                                 id="TYPE",
                                 rank="POS",
                                 pt="PT",
@@ -110,10 +110,20 @@ class TestbenchWriter(object):
                                 sort="RANK",
                                 empty="EMPT",
                                 iso="(ISO)",
+                                idx="(IDX)",
                             )]
+
     def writeTrackHeadline(self):
         """ documenting the individual track quantities """
-        self.string += ["# TRACKS\n#TYPE   ETA0  PHI0 QUAL0  ETA1  PHI1 QUAL1  ETA2  PHI2 QUAL2\n"]
+        self.string += ["# OVERLAP/ENDCAP TRACKS\n#TYPE   ETA0  PHI0 QUAL0 EMPT0  ETA1  PHI1 QUAL1 EMPT1  ETA2  PHI2 QUAL2 EMPT2\n"]
+
+    def writeBTRKTrackHeadline(self):
+        """ documenting the individual track quantities """
+        self.string += ["# BARREL TRACKS\n#TYPE   ETA0  PHI0 QUAL0  SEL0 SIDE0  WHL0 SCT10 SCT20 SCT30 SCT40 EMPT0  ETA1  PHI1 QUAL1  SEL1 SIDE1  WHL1 SCT11 SCT21 SCT31 SCT41 EMPT1  ETA2  PHI2 QUAL2  SEL2 SIDE2  WHL2 SCT12 SCT22 SCT32 SCT42 EMPT2\n"]
+
+    def writeBMTFTrackAddressHeadline(self):
+        """ documenting the individual track quantities """
+        self.string += ["# BMTF TRACK ADDRESS\n#TYPE     SEL0  SIDE0 WHEEL0 SECT10 SECT20 SECT30 SECT40 QUAL0 EMPT0  SEL1  SIDE1 WHEEL1 SECT11 SECT21 SECT31 SECT41 QUAL1 EMPT1  SEL2  SIDE2 WHEEL2 SECT12 SECT22 SECT32 SECT42 QUAL2 EMPT2\n"]
 
     def writeEventHeader(self, n):
         self.string += ["# Event {n}\n".format(n=n)]
@@ -129,15 +139,15 @@ class TestbenchWriter(object):
         """
         Convert a single ./helpers/muon.Muon object into string
         TAKES:  mu          Muon object
-                mu_type     muon type (BAR, FWD+/-, OVL+/-, FIMD, BIMD, OIMD, OUT)
-                rank        relative position of the muon (IMD: 0-23, OUT: 0-7, FWD/OVL: 0-37, BAR: 0-35)
-                addIso      whether to add isolation info (should only be done for OUT)
-        Adds to self.string "ID N PT PHI ETA CHARGE CHARGE_VALID QUALITY SORT EMPTY (ISO)"
+                mu_type     muon type (BMTF, EMTF+/-, OMTF+/-, EIMD, BIMD, OIMD, OUT)
+                rank        relative position of the muon (IMD: 0-23, OUT: 0-7, EMTF/OMTF: 0-37, BMTF: 0-35)
+                addIso      whether to add isolation info and muon index (should only be done for OUT)
+        Adds to self.string "ID N PT PHI ETA CHARGE CHARGE_VALID QUALITY SORT EMPTY (ISO) (IDX)"
         """
         isempty = 0
         if mu.ptBits == 0: isempty = 1
         sortrank = 0
-        if mu_type in ["FIMD", "BIMD", "OIMD", "OUT"]:
+        if mu_type in ["EIMD", "BIMD", "OIMD", "OUT"]:
             sortrank = mu.rank
         else:
             sortrank = mu.ptBits + mu.qualityBits
@@ -156,6 +166,7 @@ class TestbenchWriter(object):
                     )
         if addIso:
             tmp_string += " {iso:>5}".format(iso=mu.Iso)
+            tmp_string += " {idx:>5}".format(idx=mu.tfMuonIndex)
 
         tmp_string += "\n"
         self.string += [tmp_string]
@@ -164,13 +175,30 @@ class TestbenchWriter(object):
         """
         Adds the track information to the buffer.
         TAKES:
-            tracks: list of [eta, phi, qual]*n_tracks
+            For BTRK track_type: tracks: list of [eta, phi, qual, selector, wheelSide, wheelNum, sect1, sect2, sect3, sect4, empty]*n_tracks
+            For other track_types: tracks: list of [eta, phi, qual, empty]*n_tracks
             track_type: track-id = {FTRK+/-, BTRK, OTRK+/-}
         """
         for i, track in enumerate(tracks):
             if i%3==0:
                 self.string += ["{id:<6}".format(id=track_type)]
-            self.string += [" {eta:>5} {phi:>5} {qual:>5}".format(eta=track[0], phi=track[1], qual=track[2])]
+            if track_type == 'BTRK':
+                self.string += [" {eta:>5} {phi:>5} {qual:>5} {sel:>5} {wheelSide:>5} {wheelNum:>5} {sect1:>5} {sect2:>5} {sect3:>5} {sect4:>5} {empty:>5}".format(eta=track[0], phi=track[1], qual=track[2], sel=track[3], wheelSide=track[4], wheelNum=track[5], sect1=track[6], sect2=track[7], sect3=track[8], sect4=track[9], empty=track[10])]
+            else:
+                self.string += [" {eta:>5} {phi:>5} {qual:>5} {empty:>5}".format(eta=track[0], phi=track[1], qual=track[2], empty=track[3])]
+            if (i+1)%3 == 0:
+                self.string += ["\n"]
+
+    def writeBMTFTrackAddress(self, trackAddresses):
+        """
+        Adds the BMTF track address information to the buffer.
+        TAKES:
+            trackAddresses: list of [selector, wheelSide, WheelNumber, sect1, sect2, sect3, sect4, qual, empty]*n_tracks
+        """
+        for i, trkAddr in enumerate(trackAddresses):
+            if i%3==0:
+                self.string += ["{id:<6}".format(id='BTRKADDR')]
+            self.string += ["{sel:>6} {wheelSide:>6} {wheelNum:>6} {sect1:>6} {sect2:>6} {sect3:>6} {sect4:>6} {qual:>5} {empty:>5}".format(sel=trkAddr[0], wheelSide=trkAddr[1], wheelNum=trkAddr[2], sect1=trkAddr[3], sect2=trkAddr[4], sect3=trkAddr[5], sect4=trkAddr[6], qual=trkAddr[7], empty=trkAddr[8])]
             if (i+1)%3 == 0:
                 self.string += ["\n"]
 
@@ -209,10 +237,10 @@ class TestvectorWriter(object):
         """
         Convert a single ./helpers/muon.Muon object into string
         TAKES:  mu          Muon object
-                mu_type     muon type (BAR, FWD+/-, OVL+/-, FIMD, BIMD, OIMD, OUT)
-                rank        relative position of the muon (IMD: 0-23, OUT: 0-7, FWD/OVL: 0-37, BAR: 0-35)
-                addIso      whether to add isolation info (should only be done for OUT)
-        Adds to string "ID N PT PHI ETA CHARGE CHARGE_VALID QUALITY SORT EMPTY (ISO) (TWR)"
+                mu_type     muon type (BMTF, EMTF+/-, OMTF+/-, EIMD, BIMD, OIMD, OUT)
+                rank        relative position of the muon (IMD: 0-23, OUT: 0-7, EMTF/OMTF: 0-37, BMTF: 0-35)
+                addIso      whether to add isolation info and muon index(should only be done for OUT)
+        Adds to string "ID N PT PHI ETA CHARGE CHARGE_VALID QUALITY SORT EMPTY (ISO) (IDX) (TWR)"
         """
         if self.muonCounter == 0:
             self.string += ["\n{bx:0>4}".format(bx=self.bxCounter)]
@@ -236,6 +264,9 @@ class TestvectorWriter(object):
         pass
 
     def writeTrackHeadline(self):
+        pass
+
+    def writeBMTFTrackAddressHeadline(self):
         pass
 
     def writeMuonHeadline(self):
@@ -304,8 +335,12 @@ class PatternDumper(object):
         for x in range(6):
             frames[x] = [0]*72
 
-        self.writeMuonsToFrames(frames, "OUT", out_muons, 2, 0, 2)
-        self.writeMuonsToFrames(frames, "IMD", imd_muons, 3, 0)
+        nOutSets = self.vhdl_dict["OUTPUT_MULTIPLIER"]
+        nOutChans = self.vhdl_dict["NUM_OUT_CHANS"]
+
+        for i in range(nOutSets):
+            self.writeMuonsToFrames(frames, "OUT", out_muons, 2, i*nOutChans, 2)
+        self.writeMuonsToFrames(frames, "IMD", imd_muons, 3, (nOutSets-1)*nOutChans)
 
         for x, frame in frames.iteritems():
             self._writer.writeFrame(frame, ftype="out")
@@ -315,11 +350,11 @@ class PatternDumper(object):
         for x in range(6):
             frames[x] = [0]*72
 
-        self.writeMuonsToFrames(frames, "BARREL", bar_muons, 3, 36)
-        self.writeMuonsToFrames(frames, "FWD_NEG", fwdn_muons, 3, 36)
-        self.writeMuonsToFrames(frames, "FWD_POS", fwdp_muons, 3, 36)
-        self.writeMuonsToFrames(frames, "OVL_POS", ovlp_muons, 3, 36)
-        self.writeMuonsToFrames(frames, "OVL_NEG", ovln_muons, 3, 36)
+        self.writeMuonsToFrames(frames, "BMTF", bar_muons, 3, 36)
+        self.writeMuonsToFrames(frames, "EMTF_NEG", fwdn_muons, 3, 36)
+        self.writeMuonsToFrames(frames, "EMTF_POS", fwdp_muons, 3, 36)
+        self.writeMuonsToFrames(frames, "OMTF_POS", ovlp_muons, 3, 36)
+        self.writeMuonsToFrames(frames, "OMTF_NEG", ovln_muons, 3, 36)
 
         if calosums:
             self.writeCaloToFrames(frames, calosums)
@@ -333,7 +368,7 @@ class PatternDumper(object):
         themuid = mutype
         for i, muon in enumerate(muons):
             if mutype == "IMD":
-                if i < 4 or i > 19: themuid = "FIMD"
+                if i < 4 or i > 19: themuid = "EIMD"
                 elif i < 8 or i > 15: themuid = "OIMD"
                 else: themuid = "BIMD"
             link = i
@@ -352,8 +387,23 @@ class PatternDumper(object):
     def writeTrackGroup(self, muons, track_type):
         tracks = []
         for i, muon in enumerate(muons):
-            tracks.append([muon.etaBits, muon.phiBits, muon.qualityBits])
+            isEmpty = 0
+            if muon.ptBits == 0: isEmpty = 1
+            if track_type == 'BTRK':
+                trkAddr = muon.trackAddress
+                tracks.append([muon.etaBits, muon.phiBits, muon.qualityBits, 0, trkAddr[0], trkAddr[1], trkAddr[2], trkAddr[3], trkAddr[4], trkAddr[5], isEmpty])
+            else:
+                tracks.append([muon.etaBits, muon.phiBits, muon.qualityBits, isEmpty])
         self._writer.writeTracks(tracks, track_type)
+
+    def writeBMTFTrackAddressGroup(self, muons):
+        trackAddresses = []
+        for i, muon in enumerate(muons):
+            isEmpty = 0
+            if muon.ptBits == 0: isEmpty = 1
+            trkAddr = muon.trackAddress
+            trackAddresses.append([0, trkAddr[0], trkAddr[1], trkAddr[2], trkAddr[3], trkAddr[4], trkAddr[5], muon.qualityBits, isEmpty])
+        self._writer.writeBMTFTrackAddress(trackAddresses)
 
     def writeMuonBasedInputBX(self, bar_muons, fwdp_muons, fwdn_muons, ovlp_muons, ovln_muons, calosums, addTracks = False, addBXCounter = False):
         if addBXCounter:
@@ -368,19 +418,23 @@ class PatternDumper(object):
         except AttributeError:
             self._log.error("You are trying to write muons with the wrong Writer class. Only supports frame-based writing.")
             return
-        self.writeMuonGroup(fwdp_muons, "FWD+", False)
-        self.writeMuonGroup(ovlp_muons, "OVL+", False)
-        self.writeMuonGroup(bar_muons, "BAR", False)
-        self.writeMuonGroup(ovln_muons, "OVL-", False)
-        self.writeMuonGroup(fwdn_muons, "FWD-", False)
+        self.writeMuonGroup(fwdp_muons, "EMTF+", False)
+        self.writeMuonGroup(ovlp_muons, "OMTF+", False)
+        self.writeMuonGroup(bar_muons, "BMTF", False)
+        self.writeMuonGroup(ovln_muons, "OMTF-", False)
+        self.writeMuonGroup(fwdn_muons, "EMTF-", False)
 
         if addTracks:
             self._writer.writeTrackHeadline()
-            self.writeTrackGroup(fwdp_muons, "FTRK+")
+            self._writer.writeBTRKTrackHeadline()
+            self.writeTrackGroup(fwdp_muons, "ETRK+")
             self.writeTrackGroup(ovlp_muons, "OTRK+")
             self.writeTrackGroup(bar_muons, "BTRK")
             self.writeTrackGroup(ovln_muons, "OTRK-")
-            self.writeTrackGroup(fwdn_muons, "FTRK-")
+            self.writeTrackGroup(fwdn_muons, "ETRK-")
+
+            #self._writer.writeBMTFTrackAddressHeadline()
+            #self.writeBMTFTrackAddressGroup(bar_muons)
 
         self._bxCounter += 1
 
