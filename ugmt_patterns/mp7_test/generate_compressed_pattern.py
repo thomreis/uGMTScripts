@@ -101,6 +101,7 @@ def main():
     vhdl_dict = VHDLConstantsParser.parse_vhdl_file("../data/ugmt_constants.vhd")
 
     opts = parse_options()
+    nSkip = opts.skip
     fname_dict = discover_emu_files(opts.emudirectory)
     # rankLUT = l1t.MicroGMTRankPtQualLUT()
 
@@ -128,8 +129,8 @@ def main():
         basedir_mp7 = "../data/patterns/compressed/"
         path = '{path}/{pattern}/'.format(path=basedir_mp7, pattern=pattern)
 
-        input_buffer = PatternDumper(basedir_mp7+pattern+".txt", vhdl_dict, BufferWriter)
-        output_buffer = PatternDumper(basedir_mp7+pattern+"_out.txt", vhdl_dict, BufferWriter)
+        input_buffer = PatternDumper(path+pattern+".txt", vhdl_dict, BufferWriter)
+        output_buffer = PatternDumper(path+pattern+"_out.txt", vhdl_dict, BufferWriter)
 
         if opts.delay > 0:
             input_buffer.writeEmptyFrames(opts.delay)
@@ -143,6 +144,11 @@ def main():
         output_buffer.writeEmptyFrames(ALGODELAY)
         cntr = 0
         for i, event in enumerate(events):
+            if i < nSkip:
+                continue
+
+            #print 'event: {evt} {evNr}'.format(evt=i, evNr=event.eventAuxiliary().event())
+
             evt_start = time.time()
             event.getByLabel("simGmtStage2Digis", out_handle)
             event.getByLabel("simGmtStage2Digis", "imdMuonsBMTF", imd_bmtf_handle)
@@ -150,15 +156,15 @@ def main():
             event.getByLabel("simGmtStage2Digis", "imdMuonsEMTFNeg", imd_emtf_n_handle)
             event.getByLabel("simGmtStage2Digis", "imdMuonsOMTFPos", imd_omtf_p_handle)
             event.getByLabel("simGmtStage2Digis", "imdMuonsOMTFNeg", imd_omtf_n_handle)
-            #event.getByLabel("simBmtfDigis", "BMTF", bar_handle)
-            #event.getByLabel("simEmtfDigis", "EMTF", fwd_handle)
-            #event.getByLabel("simOmtfDigis", "OMTF", ovl_handle)
-            event.getByLabel("gmtStage2Digis", "BMTF", bar_handle)
-            event.getByLabel("gmtStage2Digis", "EMTF", fwd_handle)
-            event.getByLabel("gmtStage2Digis", "OMTF", ovl_handle)
+            event.getByLabel("simBmtfDigis", "BMTF", bar_handle)
+            event.getByLabel("simEmtfDigis", "EMTF", fwd_handle)
+            event.getByLabel("simOmtfDigis", "OMTF", ovl_handle)
+            #event.getByLabel("gmtStage2Digis", "BMTF", bar_handle)
+            #event.getByLabel("gmtStage2Digis", "EMTF", fwd_handle)
+            #event.getByLabel("gmtStage2Digis", "OMTF", ovl_handle)
 
-            #event.getByLabel("simGmtCaloSumDigis", "TriggerTowerSums", calo_handle)
-            event.getByLabel("emptyCaloCollsProducer", "EmptyTriggerTowerSums", calo_handle)
+            event.getByLabel("simGmtCaloSumDigis", "TriggerTowerSums", calo_handle)
+            #event.getByLabel("emptyCaloCollsProducer", "EmptyTriggerTowerSums", calo_handle)
             #event.getByLabel("simGmtCaloSumDigis", "TriggerTower2x2s", calo_handle)
             get_label_time = time.time() - evt_start
             calo_sums_raw = calo_handle.product()

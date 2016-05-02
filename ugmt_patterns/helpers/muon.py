@@ -232,7 +232,7 @@ class Muon():
         else:
             # all others correspond to 60 degree sectors = 96 in int-scale
             globPhi = processor * 96 + locPhi
-            # first processor starts at CMS phi = 15 degrees... Handle wrap-around with %:
-            globPhi = (globPhi + 24) % 576
+            # first processor starts at CMS phi = 15 degrees... Handle wrap-around with %: Add 576 to make sure the number is positive
+            globPhi = (globPhi + 600) % 576
         return globPhi
 
