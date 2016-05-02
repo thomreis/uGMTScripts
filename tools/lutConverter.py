@@ -107,17 +107,34 @@ def write_dottxt_file(lut, outFileName):
 
 def write_dotxml_file(lut, outFileName):
     with open(outFileName, 'w') as outFile:
-        header = '<module>\n'
-        header += '  <context id="ugmt.processors">\n'
+        header = '<algo id="ugmt">\n'
+        header += '  <context id="processors">\n'
         header += '    <param id="{lutId}" type="vector:uint">\n'.format(lutId=outFileName.split('/')[-1].replace('.xml', ''))
         header += '      <!-- version {version}, input width {inputWidth}, output width {outputWidth} -->\n'.format(version=lut.getVersion(), inputWidth=sum(lut.getInputWidths()), outputWidth=lut.getOutputWidth())
         trailer = '\n    </param>\n'
         trailer += '  </context>\n'
-        trailer += '</module>'
+        trailer += '</algo>'
         payload = '      '
         for addr in range(lut.getNEntries()):
             payload += '{value}, '.format(value=lut.lookup(addr))
         outFile.write(header + payload[:-2] + trailer)
+
+def write_commondotxml_file(luts, lutNames, outFileName):
+    with open(outFileName, 'w') as outFile:
+        header = '<algo id="ugmt">\n'
+        header += '  <context id="processors">\n'
+        payload = ''
+        for i, lut in enumerate(luts):
+            payload += '    <param id="{lutId}" type="vector:uint">\n'.format(lutId=lutNames[i])
+            payload += '      <!-- version {version}, input width {inputWidth}, output width {outputWidth} -->\n'.format(version=lut.getVersion(), inputWidth=sum(lut.getInputWidths()), outputWidth=lut.getOutputWidth())
+            payload += '      '
+            for addr in range(lut.getNEntries()):
+                payload += '{value}, '.format(value=lut.lookup(addr))
+            payload = payload[:-2]
+            payload += '\n    </param>\n'
+        trailer = '  </context>\n'
+        trailer += '</algo>'
+        outFile.write(header + payload + trailer)
 
 def write_dotjson_file(lut, outFileName):
     with open(outFileName, 'w') as outFile:
@@ -146,6 +163,9 @@ def get_lut_from_file(filename):
 def main():
     options = parse_options()
 
+    luts = []
+    lutNames = []
+
     if options.inPath != '':
         if options.inPath.endswith('/'):
             print 'Begin converting LUT files in {inPath}'.format(inPath=options.inPath)
@@ -155,12 +175,17 @@ def main():
                 file_list = discover_lut_files(options.inPath)
 
             for fPath in file_list:
-                lut = get_lut_from_file(fPath)
                 fName = path.split(fPath)[-1]
-                if options.outPath == '':
-                    outFile = options.inPath + fName[:-4]
+                lut = get_lut_from_file(fPath)
+                luts.append(lut)
+                lutNames.append(fName[:-4])
+                outPath = options.outPath
+                if outPath == '':
+                    outPath = options.inPath
+                    outFile = outPath + fName[:-4]
                 else:
-                    outFile = path.split(options.outPath)[0] + '/' + fName[:-4]
+                    outPath = path.split(options.outPath)[0] + '/'
+                    outFile = outPath + fName[:-4]
                 if options.txt:
                     print 'Writing converted LUT to file {file}'.format(file=outFile + '.txt')
                     write_dottxt_file(lut, outFile + '.txt')
@@ -176,9 +201,15 @@ def main():
                 if options.json:
                     print 'Writing converted LUT to file {file}'.format(file=outFile + '.json')
                     write_dotjson_file(lut, outFile + '.json')
+
+            # write all LUTs in one file
+            if options.xml:
+                print 'Writing LUTs to file {file}'.format(file=outPath + 'UGMT_MP7_ALGO_LUTS.xml')
+                write_commondotxml_file(luts, lutNames, outPath + 'UGMT_MP7_ALGO_LUTS.xml')
         else:
             print 'Begin converting file {file}'.format(file=options.inPath)
             lut = get_lut_from_file(options.inPath)
+            luts.append(lut)
             if options.outPath == '':
                 outFile = options.inPath[:-4]
             elif options.outPath.endswith('/'):
