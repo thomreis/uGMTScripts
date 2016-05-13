@@ -391,9 +391,9 @@ class PatternDumper(object):
             if muon.ptBits == 0: isEmpty = 1
             if track_type == 'BTRK':
                 trkAddr = muon.trackAddress
-                tracks.append([muon.etaBits, muon.phiBits, muon.qualityBits, 0, trkAddr[0], trkAddr[1], trkAddr[2], trkAddr[3], trkAddr[4], trkAddr[5], isEmpty])
+                tracks.append([muon.etaBits, muon.globPhiBits, muon.qualityBits, 0, trkAddr[0], trkAddr[1], trkAddr[2], trkAddr[3], trkAddr[4], trkAddr[5], isEmpty])
             else:
-                tracks.append([muon.etaBits, muon.phiBits, muon.qualityBits, isEmpty])
+                tracks.append([muon.etaBits, muon.globPhiBits, muon.qualityBits, isEmpty])
         self._writer.writeTracks(tracks, track_type)
 
     def writeBMTFTrackAddressGroup(self, muons):
