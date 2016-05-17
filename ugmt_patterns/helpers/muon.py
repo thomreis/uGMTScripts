@@ -23,6 +23,7 @@ class Muon():
 
         self.frame = frame
         self.haloFine = 0
+        self.etaFine = 0
         self.tftype = -1
         self.link = link
         self.local_link = link
@@ -96,6 +97,10 @@ class Muon():
                     self.globPhiBits = self.calcGlobalPhi(self.ptBits, self.tftype, self.local_link)
                 if bitword_type != "OUT":
                     self.haloFine = bithlp.get_shifted_subword(self.bitword, hf_low, hf_low+1)
+                    if self.tftype == 2:
+                        self.etaFine = 1
+                    else:
+                        self.etaFine = self.haloFine
 
             self.rank = 0
             self.globPhiBits = self.phiBits
@@ -123,11 +128,13 @@ class Muon():
                 trackadd_high += 1
                 self.trackAddress = obj.trackAddress()
                 self.haloFine = obj.hwHF()
+                self.etaFine = self.haloFine
                 self.tftype = obj.trackFinderType()
                 if self.tftype == 1 or self.tftype == 2:
                     self.tftype = 1
                 elif self.tftype == 3 or self.tftype == 4:
                     self.tftype = 2
+                    self.etaFine = 1
                 if gPhi is None:
                     self.globPhiBits = self.calcGlobalPhi(obj.hwPhi(), obj.trackFinderType(), obj.processor())
 
