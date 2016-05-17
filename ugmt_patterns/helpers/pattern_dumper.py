@@ -98,7 +98,7 @@ class TestbenchWriter(object):
 
     def writeMuonHeadline(self):
         """ documenting the individual muon quantities """
-        self.string += ["#{id:<5} {rank:>5} {pt:>5} {phi:>5} {eta:>5} {charge:>5} {charge_valid:>5} {quality:>5} {sort:>5} {empty:>5} {iso:>5} {idx:>5}\n".format(
+        self.string += ["#{id:<5} {rank:>5} {pt:>5} {phi:>5} {eta:>5} {charge:>5} {charge_valid:>5} {quality:>5} {hf:>5} {sort:>5} {empty:>5} {iso:>5} {idx:>5}\n".format(
                                 id="TYPE",
                                 rank="POS",
                                 pt="PT",
@@ -107,6 +107,7 @@ class TestbenchWriter(object):
                                 charge="CHR",
                                 charge_valid="VCHR",
                                 quality="QUAL",
+                                hf="HF",
                                 sort="RANK",
                                 empty="EMPT",
                                 iso="(ISO)",
@@ -142,7 +143,7 @@ class TestbenchWriter(object):
                 mu_type     muon type (BMTF, EMTF+/-, OMTF+/-, EIMD, BIMD, OIMD, OUT)
                 rank        relative position of the muon (IMD: 0-23, OUT: 0-7, EMTF/OMTF: 0-37, BMTF: 0-35)
                 addIso      whether to add isolation info and muon index (should only be done for OUT)
-        Adds to self.string "ID N PT PHI ETA CHARGE CHARGE_VALID QUALITY SORT EMPTY (ISO) (IDX)"
+        Adds to self.string "ID N PT PHI ETA CHARGE CHARGE_VALID QUALITY HF SORT EMPTY (ISO) (IDX)"
         """
         isempty = 0
         if mu.ptBits == 0: isempty = 1
@@ -152,7 +153,7 @@ class TestbenchWriter(object):
         else:
             sortrank = mu.ptBits + mu.qualityBits
 
-        tmp_string = "{id:<6} {rank:>5} {pt:>5} {phi:>5} {eta:>5} {charge:>5} {charge_valid:>5} {quality:>5} {sort:>5} {empty:>5}".format(
+        tmp_string = "{id:<6} {rank:>5} {pt:>5} {phi:>5} {eta:>5} {charge:>5} {charge_valid:>5} {quality:>5} {hf:>5} {sort:>5} {empty:>5}".format(
                         id=mu_type,
                         rank=rank,
                         pt=mu.ptBits,
@@ -161,6 +162,7 @@ class TestbenchWriter(object):
                         charge=mu.Sysign & 0x1,
                         charge_valid=mu.Sysign >> 1,
                         quality=mu.qualityBits,
+                        hf=mu.haloFine,
                         sort=sortrank,
                         empty=isempty
                     )

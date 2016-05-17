@@ -22,6 +22,7 @@ class Muon():
         self.bx = bx
 
         self.frame = frame
+        self.haloFine = 0
         self.tftype = -1
         self.link = link
         self.local_link = link
@@ -73,6 +74,7 @@ class Muon():
         else:
             trackadd_low = vhdl_dict["BMTF_ADDRESS_STATION_4_IN_LOW"] - 2
             trackadd_high = vhdl_dict["BMTF_DETECTOR_SIDE_HIGH"] + 4
+            hf_low = vhdl_dict["HALO_FINE_IN"]
             self.trackAddress = [0]*6
 
         if obj == None and bitword != None:     # for hardware
@@ -92,6 +94,8 @@ class Muon():
                 self.tfMuonIndex = -1
                 if self.local_link != -1:
                     self.globPhiBits = self.calcGlobalPhi(self.ptBits, self.tftype, self.local_link)
+                if bitword_type != "OUT":
+                    self.haloFine = bithlp.get_shifted_subword(self.bitword, hf_low, hf_low+1)
 
             self.rank = 0
             self.globPhiBits = self.phiBits
@@ -118,6 +122,7 @@ class Muon():
                 trackadd_low += 1
                 trackadd_high += 1
                 self.trackAddress = obj.trackAddress()
+                self.haloFine = obj.hwHF()
                 self.tftype = obj.trackFinderType()
                 if self.tftype == 1 or self.tftype == 2:
                     self.tftype = 1
@@ -144,6 +149,8 @@ class Muon():
                 self.bitword += (self.Iso << iso_low)
             if mu_type == "OUT" and self.tfMuonIndex > 0:
                 self.bitword += (self.tfMuonIndex << idx_low)
+            if bitword_type != "OUT":
+                self.bitword += (self.haloFine << hf_low)
 
             if self.tftype == 0:
                 # shift by +1 necessary because of the control bit 31
