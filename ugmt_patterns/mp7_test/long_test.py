@@ -186,7 +186,15 @@ def main():
     vhdl_cfg = VHDLConstantsParser.parse_vhdl_file("data/ugmt_constants.vhd")
     analyser = Analyser('tx_tmp.txt', 'tmp/tx_summary.txt', vhdl_cfg)
 
+    # setting clock source to internal
+    try:
+        subprocess.call(['mp7butler.py', '-c', opts.connections_file, 'reset', opts.boardname, '--clksrc', 'internal'])
+    except subprocess.CalledProcessError as e:
+        print " errors in mp7_butler: "+str(e)
+        return
+
     for i in range(len(file_list_rx)):
+        print 'Processing file {idx}, {rxFile}'.format(idx=i+1, rxFile=file_list_rx[i])
         cmp_rx = file_list_rx[i]
         cmp_tx = file_list_tx[i]
         rx_tmp_name = 'rx_tmp.txt'
