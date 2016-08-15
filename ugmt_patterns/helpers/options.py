@@ -18,6 +18,7 @@ def parse_options(description = ""):
     parser.add_argument("--delay", dest="delay", help="Specify how many empty frames should be written to mp7-pattern", default=4, type=int)
     parser.add_argument("--gtdumps", dest="gtdumps", help="Specify a folder containing files that represent the GT-spy buffer dumps", default="", type=str)
     parser.add_argument("--gtoffset", dest="gtoffset", help="Specify the offset for the GT-spy buffer (leading comma)", default=31, type=int)
+    parser.add_argument("--max-events", dest="nMax", help="Number of events to analyse", default=-1, type=int)
     parser.add_argument("--skip", dest="skip", help="Number of events to skip", default=0, type=int)
     
     opts = parser.parse_args()

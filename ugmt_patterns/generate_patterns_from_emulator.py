@@ -88,6 +88,8 @@ def main():
     vhdl_dict = VHDLConstantsParser.parse_vhdl_file("data/ugmt_constants.vhd")
 
     opts = parse_options()
+    nMax = opts.nMax
+    skip = opts.skip
     fname_dict = discover_emu_files(opts.emudirectory)
     # rankLUT = l1t.MicroGMTRankPtQualLUT()
 
@@ -134,6 +136,10 @@ def main():
         avg_write_time = 0
         n_twrs = 0
         for i, event in enumerate(events):
+            if i < skip:
+                continue
+            if nMax > 0 and i-skip > nMax:
+                break
             evt_start = time.time()
             event_head = "#"*80+"\n"
             event_head += "# Event: {ievent}\n".format(ievent=i)
