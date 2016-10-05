@@ -109,46 +109,52 @@ class Analyser():
             if not ev in evts and n != 0:  evts.append(ev)
         return total, evts
 
-    def print_out(self, pattern, logger):
-        logger.write("Errors in pattern {pat}\n".format(pat=pattern))
+    def print_out(self, pattern, logger=None):
+        if logger: logger.write("Errors in pattern {pat}\n".format(pat=pattern))
         print "error summary for pattern:", pattern
         print "-----------------------------------------------------------------------"
         print "Note counters: nerrors / total instances (non-trivial instances)"
         print "-----------------------------------------------------------------------"
-        logger.write("number of events with errors: {n} / {tot} ({nontriv})\n".format(n=len(self.errors), tot=self.event_ctr, nontriv=self.event_nontrivial_cntr))
+        if logger: logger.write("number of events with errors: {n} / {tot} ({nontriv})\n".format(n=len(self.errors), tot=self.event_ctr, nontriv=self.event_nontrivial_cntr))
         print "number of events with errors: {n} / {tot} ({nontriv})".format(n=len(self.errors), tot=self.event_ctr, nontriv=self.event_nontrivial_cntr)
-        logger.write("errornous events: {evts}\n".format(evts=self.errors))
+        if logger: logger.write("errornous events: {evts}\n".format(evts=self.errors))
         tot, events = self.get_total(self.pt_errors)
         print "number of pt errors:   ", tot, "/", self.mu_cntr
-        logger.write("number of muons with pt errors: {n} / {total}\n".format(n=tot, total=self.mu_cntr))
-        logger.write("errornous events: {evts}\n".format(evts=events))
+        if logger:
+            logger.write("number of muons with pt errors: {n} / {total}\n".format(n=tot, total=self.mu_cntr))
+            logger.write("errornous events: {evts}\n".format(evts=events))
 
         tot, events = self.get_total(self.phi_errors)
         print "number of phi errors:  ", tot, "/", self.mu_cntr
-        logger.write("number of muons with phi errors: {n} / {total}\n".format(n=tot, total=self.mu_cntr))
-        logger.write("errornous events: {evts}\n".format(evts=events))
+        if logger:
+            logger.write("number of muons with phi errors: {n} / {total}\n".format(n=tot, total=self.mu_cntr))
+            logger.write("errornous events: {evts}\n".format(evts=events))
 
         tot, events = self.get_total(self.eta_errors)
         print "number of eta errors:  ", tot, "/", self.mu_cntr
-        logger.write("number of muons with eta errors: {n} / {total}\n".format(n=tot, total=self.mu_cntr))
-        logger.write("errornous events: {evts}\n".format(evts=events))
+        if logger:
+            logger.write("number of muons with eta errors: {n} / {total}\n".format(n=tot, total=self.mu_cntr))
+            logger.write("errornous events: {evts}\n".format(evts=events))
 
         tot, events = self.get_total(self.qual_errors)
         print "number of qual errors: ", tot, "/", self.mu_cntr
-        logger.write("number of muons with qual errors: {n} / {total}\n".format(n=tot, total=self.mu_cntr))
-        logger.write("errornous events: {evts}\n".format(evts=events))
+        if logger:
+            logger.write("number of muons with qual errors: {n} / {total}\n".format(n=tot, total=self.mu_cntr))
+            logger.write("errornous events: {evts}\n".format(evts=events))
 
         tot, events = self.get_total(self.chrg_errors)
         print "number of chrg errors: ", tot, "/", self.mu_cntr
-        logger.write("number of muons with chrg errors: {n} / {total}\n".format(n=tot, total=self.mu_cntr))
-        logger.write("errornous events: {evts}\n".format(evts=events))
+        if logger:
+            logger.write("number of muons with chrg errors: {n} / {total}\n".format(n=tot, total=self.mu_cntr))
+            logger.write("errornous events: {evts}\n".format(evts=events))
 
         tot, events = self.get_total(self.iso_errors)
         print "number of iso errors:  ", tot, "/", self.mu_cntr
-        logger.write("number of muons with iso errors: {n} / {total}\n".format(n=tot, total=self.mu_cntr))
-        logger.write("errornous events: {evts}\n".format(evts=events))
+        if logger:
+            logger.write("number of muons with iso errors: {n} / {total}\n".format(n=tot, total=self.mu_cntr))
+            logger.write("errornous events: {evts}\n".format(evts=events))
         print "-----------------------------------------------------------------------"
-        print "for more info see log file."
+        if logger: print "for more info see log file."
 
 def main():
     opts = parse_options()
@@ -193,81 +199,87 @@ def main():
         print " errors in mp7_butler: "+str(e)
         return
 
-    for i in range(len(file_list_rx)):
-        print 'Processing file {idx}, {rxFile}'.format(idx=i+1, rxFile=file_list_rx[i])
-        cmp_rx = file_list_rx[i]
-        cmp_tx = file_list_tx[i]
-        rx_tmp_name = 'rx_tmp.txt'
-        tx_tmp_name = 'tx_tmp.txt'
-        decompress(rx_tmp_name, cmp_rx)
-        decompress(tx_tmp_name, cmp_tx)
-
-        cap_lines = []
-        if opts.testpath == '':
-            butler_out = ''
-            if opts.p5:
-                butlerError = subprocess.call(['mp7butler.py', '-c', opts.connections_file, 'buffers', opts.boardname, 'algoPlay', '--inject', 'file://{fname}'.format(fname=rx_tmp_name), '-e', '36-71'])
-                butlerError += subprocess.call(['mp7butler.py', '-c', opts.connections_file, 'buffers', opts.boardname, 'algoPlay', '--inject', 'file://{fname}'.format(fname=rx_tmp_name), '-e', '0-35', '--play', '{delay}'.format(delay=opts.en_delay)])
-                if butlerError != 0:
-                    print " errors in mp7_butler: "+str(butlerError)
-                    return
-            else:
-                try:
-                    subprocess.check_output(['mp7butler.py', '-c', opts.connections_file, 'buffers', opts.boardname, 'algoPlay', '--inject', 'file://{fname}'.format(fname=rx_tmp_name), '-e', '36-71'])
-                    subprocess.check_output(['mp7butler.py', '-c', opts.connections_file, 'buffers', opts.boardname, 'algoPlay', '--inject', 'file://{fname}'.format(fname=rx_tmp_name), '-e', '0-35', '--play', '{delay}'.format(delay=opts.en_delay)])
-                except subprocess.CalledProcessError as e:
-                    print " errors in mp7_butler: "+str(e)
-                    return
-            log.write(butler_out)
-            time.sleep(1)
-            if opts.p5:
-                butlerError = subprocess.call(['mp7butler.py', '-c', opts.connections_file, 'capture', opts.boardname, '--outputpath', 'tmp'])
-                if butlerError != 0:
-                    print " errors in mp7_butler: "+str(e)
-                    return
-            else:
-                try:
-                    subprocess.check_output(['mp7butler.py', '-c', opts.connections_file, 'capture', opts.boardname, '--outputpath', 'tmp'])
-                except subprocess.CalledProcessError as e:
-                    print " errors in mp7_butler: "+str(e)
-                    return
-            log.write(butler_out)
+    try:
+        for i in range(len(file_list_rx)):
+            print 'Processing file {idx}, {rxFile}'.format(idx=i+1, rxFile=file_list_rx[i])
+            cmp_rx = file_list_rx[i]
+            cmp_tx = file_list_tx[i]
+            rx_tmp_name = 'rx_tmp.txt'
+            tx_tmp_name = 'tx_tmp.txt'
+            decompress(rx_tmp_name, cmp_rx)
+            decompress(tx_tmp_name, cmp_tx)
 
             cap_lines = []
-            with open('tmp/tx_summary.txt', 'r') as cap:
-                cap_lines = cap.readlines()
+            if opts.testpath == '':
+                butler_out = ''
+                if opts.p5:
+                    butlerError = subprocess.call(['mp7butler.py', '-c', opts.connections_file, 'buffers', opts.boardname, 'algoPlay', '--inject', 'file://{fname}'.format(fname=rx_tmp_name), '-e', '36-71'])
+                    butlerError += subprocess.call(['mp7butler.py', '-c', opts.connections_file, 'buffers', opts.boardname, 'algoPlay', '--inject', 'file://{fname}'.format(fname=rx_tmp_name), '-e', '0-35', '--play', '{delay}'.format(delay=opts.en_delay)])
+                    if butlerError != 0:
+                        print " errors in mp7_butler: "+str(butlerError)
+                        return
+                else:
+                    try:
+                        subprocess.check_output(['mp7butler.py', '-c', opts.connections_file, 'buffers', opts.boardname, 'algoPlay', '--inject', 'file://{fname}'.format(fname=rx_tmp_name), '-e', '36-71'])
+                        subprocess.check_output(['mp7butler.py', '-c', opts.connections_file, 'buffers', opts.boardname, 'algoPlay', '--inject', 'file://{fname}'.format(fname=rx_tmp_name), '-e', '0-35', '--play', '{delay}'.format(delay=opts.en_delay)])
+                    except subprocess.CalledProcessError as e:
+                        print " errors in mp7_butler: "+str(e)
+                        return
+                log.write(butler_out)
+                time.sleep(1)
+                if opts.p5:
+                    butlerError = subprocess.call(['mp7butler.py', '-c', opts.connections_file, 'capture', opts.boardname, '--outputpath', 'tmp'])
+                    if butlerError != 0:
+                        print " errors in mp7_butler: "+str(e)
+                        return
+                else:
+                    try:
+                        subprocess.check_output(['mp7butler.py', '-c', opts.connections_file, 'capture', opts.boardname, '--outputpath', 'tmp'])
+                    except subprocess.CalledProcessError as e:
+                        print " errors in mp7_butler: "+str(e)
+                        return
+                log.write(butler_out)
+
+                cap_lines = []
+                with open('tmp/tx_summary.txt', 'r') as cap:
+                    cap_lines = cap.readlines()
+                    # if opts.dump:
+                    #     with open(opts.outpath+'/tx_summary_{x}.txt'.format(x=i), 'w') as ofile:
+                    #         for lin in cap_lines:
+                    #             ofile.write(lin)
                 # if opts.dump:
-                #     with open(opts.outpath+'/tx_summary_{x}.txt'.format(x=i), 'w') as ofile:
-                #         for lin in cap_lines:
-                #             ofile.write(lin)
-            # if opts.dump:
-            #     with open('tmp/rx_summary.txt', 'r') as cap:
-            #         with open(opts.outpath+'/rx_summary_{x}.txt'.format(x=i), 'w') as ofile:
-            #             ofile.write(cap.read())
+                #     with open('tmp/rx_summary.txt', 'r') as cap:
+                #         with open(opts.outpath+'/rx_summary_{x}.txt'.format(x=i), 'w') as ofile:
+                #             ofile.write(cap.read())
 
 
-        else:
-            with open(known_responses[i], 'r') as cap:
-                cap_lines = cap.readlines()
-            analyser.hwfname = known_responses[i]
+            else:
+                with open(known_responses[i], 'r') as cap:
+                    cap_lines = cap.readlines()
+                analyser.hwfname = known_responses[i]
 
-        # quick analysis whether the tx buffers are the same
-        emu_lines = []
-        with open(tx_tmp_name, 'r') as emu:
-            emu_lines = emu.readlines()
+            # quick analysis whether the tx buffers are the same
+            emu_lines = []
+            with open(tx_tmp_name, 'r') as emu:
+                emu_lines = emu.readlines()
 
 
-        diff = difflib.context_diff(emu_lines, cap_lines)
-        have_errors = False
-        for d in diff:
-            if d.startswith("***************"):
-                have_errors = True
-                break
-        # if they are not: do detailed analysis
-        if have_errors:
-            analyser.analyse(i)
+            diff = difflib.context_diff(emu_lines, cap_lines)
+            have_errors = False
+            for d in diff:
+                if d.startswith("***************"):
+                    have_errors = True
+                    break
+            # if they are not: do detailed analysis
+            if have_errors:
+                analyser.analyse(i)
 
-    # print summary and write details to log
+            # print current summary
+            analyser.print_out(pattern_name)
+    except KeyboardInterrupt:
+        print 'Keyboard interrupt while processing file {idx}, {rxFile}'.format(idx=i+1, rxFile=file_list_rx[i])
+
+    # print final summary and write details to log
     analyser.print_out(pattern_name, log)
     log.close()
 
