@@ -88,6 +88,8 @@ def main():
     vhdl_dict = VHDLConstantsParser.parse_vhdl_file("data/ugmt_constants.vhd")
 
     opts = parse_options()
+    nMax = opts.nMax
+    skip = opts.skip
     fname_dict = discover_emu_files(opts.emudirectory)
     # rankLUT = l1t.MicroGMTRankPtQualLUT()
 
@@ -134,6 +136,10 @@ def main():
         avg_write_time = 0
         n_twrs = 0
         for i, event in enumerate(events):
+            if i < skip:
+                continue
+            if nMax > 0 and i-skip > nMax:
+                break
             evt_start = time.time()
             event_head = "#"*80+"\n"
             event_head += "# Event: {ievent}\n".format(ievent=i)
@@ -165,6 +171,7 @@ def main():
 
             emu_out_muons = out_handle.product()
             outmuons = get_muon_list_out(emu_out_muons, "OUT", vhdl_dict)
+            serializermuons = get_muon_list_out(emu_out_muons, "SER", vhdl_dict)
             imd_emtf_p_prod = imd_emtf_p_handle.product()
             imdmuons = get_muon_list_out(imd_emtf_p_prod, "IMD", vhdl_dict, 4)
             imd_omtf_p_prod = imd_omtf_p_handle.product()
@@ -205,9 +212,9 @@ def main():
                 input_testbench.writeTowerIndices(tower_indices[n_twrs:n_twrs+cntr])
                 n_twrs += cntr
 
-            serializer_testbench.writeMuonBasedOutputBX(outmuons, imdmuons)
+            serializer_testbench.writeMuonBasedOutputBX(serializermuons, imdmuons)
             serializer_testbench.addLine("# Expected emulator output\n")
-            serializer_testbench.writeFrameBasedOutputBX(outmuons, imdmuons)
+            serializer_testbench.writeFrameBasedOutputBX(serializermuons, imdmuons)
             integration_testbench.addLine("# Expected emulator output\n")
             integration_testbench.writeFrameBasedOutputBX(outmuons, imdmuons)
             write_time = time.time() - evt_start - conversion_time
