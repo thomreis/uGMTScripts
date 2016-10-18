@@ -98,9 +98,9 @@ def compare( nozs_path, zs_path, zs_mask, logs_path, bx, pattern ):
 				try:
 					nozs_file = open( nozs_path, 'r' )
 					zs_file = open( zs_path )
-					with open( '../error_events/nozs_' + bx + '_' + pattern + '.txt', 'w' ) as nozs_error:
+					with open( 'error_events/nozs_' + bx + '_' + pattern + '.txt', 'w' ) as nozs_error:
 						nozs_error.write( nozs_file.read() )
-					with open( '../error_events/zs_' + bx + '_' + pattern + '.txt', 'w' ) as zs_error:
+					with open( 'error_events/zs_' + bx + '_' + pattern + '.txt', 'w' ) as zs_error:
                                         	zs_error.write( zs_file.read() )
 					nozs_file.close()
 					zs_file.close()
@@ -113,10 +113,9 @@ def compare( nozs_path, zs_path, zs_mask, logs_path, bx, pattern ):
 		print 'Could not open zs file'
 		quit()
 
-
 if __name__ == '__main__':
 
-	root_dir = '/home/utcausr/zsvalidation/uGMTScripts/ugmt_patterns/'	
+	root_dir = '/home/utcausr/uGMTScripts/ugmt_patterns/zs_test/'
 	mask_i = [ 0x1ff, 0x0 ]*3
 	mask_o = [ 0x3fc00, 0x0 ]*3
 

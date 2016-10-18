@@ -1,8 +1,8 @@
 #!/bin/bash
 CONN=/home/utcausr/mp7sw/connection_files/connections-b40.xml
 address=ugmt4_0_0_pre1
-root_path=/home/utcausr/zsvalidation/uGMTScripts/ugmt_patterns
-patterns=/home/utcausr/zsvalidation/uGMTScripts/ugmt_patterns/paths/rx_paths.txt
+root_path=/home/utcausr/uGMTScripts/ugmt_patterns/zs_test
+patterns=$root_path/paths/rx_paths.txt
 e=0-71
 if [ -z ${1+x} ]; then 
 	valid=nv
@@ -35,8 +35,8 @@ do
 	mp7butler.py -c $CONN rxalign -e $e --to-bx 7,5 $address
 	mp7butler.py -c $CONN easylatency $address --txBank 2 --tx 0 --rxBank 1 --rx 36-71 --algoLatency 27 --masterLatency 37 --rxExtraFrames 12 --txExtraFrames 12
 	mp7butler.py -c $CONN rosetup $address --internal --bxoffset 2
-	mp7butler.py -c $CONN romenu $address /home/utcausr/zsvalidation/uGMTScripts/ugmt_patterns/mp7_test/ugmt.py standardMenu
-	mp7butler.py -c $CONN zsmenu $address /home/utcausr/zsvalidation/uGMTScripts/ugmt_patterns/mp7_test/ugmt.py zsStandardMenu
+	mp7butler.py -c $CONN romenu $address $root_path/../mp7_test/ugmt.py standardMenu
+	mp7butler.py -c $CONN zsmenu $address $root_path/../mp7_test/ugmt.py zsStandardMenu
 	
 	echo Pattern:	$rxfile >> $root_path/logs/summary.txt
 	echo Bx:	Status: >> $root_path/logs/summary.txt
@@ -63,9 +63,9 @@ do
 
 		#choose normal or validation mode
 		if [ $valid == 'v' ]; then
-			python $root_path/scripts/check_zs_mask_valid.py output_nozs.dat output_zs.dat $i $rxfile
+			python $root_path/check_zs_mask_valid.py output_nozs.dat output_zs.dat $i $rxfile
 		else
-                	python $root_path/scripts/check_zs_mask.py output_nozs.dat output_zs.dat $i $rxfile
+                	python $root_path/check_zs_mask.py output_nozs.dat output_zs.dat $i $rxfile
 		fi
 		echo Bx $i/132 complete
 	done
@@ -73,6 +73,6 @@ do
 done < $patterns
 
 #script to do short summary in logs/summary.txt file
-python $root_path/scripts/zs_summary.py
+python $root_path/zs_summary.py
 
 echo Completed
