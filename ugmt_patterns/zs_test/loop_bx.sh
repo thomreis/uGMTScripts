@@ -1,7 +1,7 @@
 #!/bin/bash
 CONN=/home/utcausr/mp7sw/connection_files/connections-b40.xml
-address=ugmt-zs
-root_path=/home/utcausr/zsvalidation/uGMTScripts/ugmt_patterns
+address=ugmt
+root_path=/home/utcausr/uGMTScripts/ugmt_patterns/zs_test
 
 mp7butler.py -c $CONN -c $CONN reset $address --clksrc=internal
 
@@ -11,8 +11,8 @@ mp7butler.py -c $CONN rxmgts -e 36-71 $address
 mp7butler.py -c $CONN rxalign -e 36-71 --to-bx 7,5 $address
 mp7butler.py -c $CONN easylatency $address --txBank 2 --tx 0-3 --rxBank 1 --rx 36-71 --algoLatency 27 --masterLatency 37 --rxExtraFrames 12 --txExtraFrames 12
 mp7butler.py -c $CONN rosetup $address --internal --bxoffset 2
-mp7butler.py -c $CONN romenu $address /home/utcausr/uGMTScripts/ugmt_patterns/mp7_test/ugmt.py standardMenu
-mp7butler.py -c $CONN zsmenu $address /home/utcausr/uGMTScripts/ugmt_patterns/mp7_test/ugmt.py zsStandardMenu
+mp7butler.py -c $CONN romenu $address $root_path/../mp7_test/ugmt.py standardMenu
+mp7butler.py -c $CONN zsmenu $address $root_path/../mp7_test/ugmt.py zsStandardMenu
 
 rm $root_path/logs/summary.txt
 rm $root_path/logs/failure_log.txt
