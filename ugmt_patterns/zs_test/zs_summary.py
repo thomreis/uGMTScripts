@@ -1,6 +1,8 @@
+import sys
+
 ones, zeros = 0, 0
 
-with open( '/home/utcausr/zsvalidation/uGMTScripts/ugmt_patterns/logs/summary.txt', 'a+' ) as summ:
+with open( sys.argv[1]+'/summary.txt', 'a+' ) as summ:
 	for line in summ:
 		if line[0].isdigit():
 			try:
