@@ -105,7 +105,7 @@ def main():
     fname_dict = discover_emu_files(opts.emudirectory)
     # rankLUT = l1t.MicroGMTRankPtQualLUT()
 
-    ALGODELAY = opts.delay + 25 #first frame with valid = 1
+    ALGODELAY = opts.delay + 27 #first frame with valid = 1
 
     max_events = int((1024-ALGODELAY)/6)
 

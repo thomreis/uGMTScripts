@@ -98,7 +98,7 @@ class TestbenchWriter(object):
 
     def writeMuonHeadline(self):
         """ documenting the individual muon quantities """
-        self.string += ["#{id:<5} {rank:>5} {pt:>5} {phi:>5} {eta:>5} {charge:>5} {charge_valid:>5} {quality:>5} {sort:>5} {empty:>5} {iso:>5} {idx:>5}\n".format(
+        self.string += ["#{id:<5} {rank:>5} {pt:>5} {phi:>5} {eta:>5} {charge:>5} {charge_valid:>5} {quality:>5} {sort:>5} {empty:>5} {iso:>5} {idx:>5} {phiextra:>5}\n".format(
                                 id="TYPE",
                                 rank="POS",
                                 pt="PT",
@@ -111,6 +111,7 @@ class TestbenchWriter(object):
                                 empty="EMPT",
                                 iso="(ISO)",
                                 idx="(IDX)",
+                                phiextra="(PHIEXTRA)",
                             )]
 
     def writeTrackHeadline(self):
@@ -142,7 +143,7 @@ class TestbenchWriter(object):
                 mu_type     muon type (BMTF, EMTF+/-, OMTF+/-, EIMD, BIMD, OIMD, OUT)
                 rank        relative position of the muon (IMD: 0-23, OUT: 0-7, EMTF/OMTF: 0-37, BMTF: 0-35)
                 addIso      whether to add isolation info and muon index (should only be done for OUT)
-        Adds to self.string "ID N PT PHI ETA CHARGE CHARGE_VALID QUALITY SORT EMPTY (ISO) (IDX)"
+        Adds to self.string "ID N PT PHI ETA CHARGE CHARGE_VALID QUALITY SORT EMPTY (ISO) (IDX) (PHIEXTRA)"
         """
         isempty = 0
         if mu.ptBits == 0: isempty = 1
@@ -167,6 +168,7 @@ class TestbenchWriter(object):
         if addIso:
             tmp_string += " {iso:>5}".format(iso=mu.Iso)
             tmp_string += " {idx:>5}".format(idx=mu.tfMuonIndex)
+            tmp_string += " {phiextra:>5}".format(phiextra=mu.phi_extrapol)
 
         tmp_string += "\n"
         self.string += [tmp_string]
@@ -335,7 +337,9 @@ class PatternDumper(object):
         for x in range(6):
             frames[x] = [0]*72
 
-        nOutSets = self.vhdl_dict["OUTPUT_MULTIPLIER"]
+        #nOutSets = self.vhdl_dict["OUTPUT_MULTIPLIER"]
+        #nOutSets = self.vhdl_dict["OUTPUT_QUAD_ASSIGNMENT"]
+        nOutSets = 6
         nOutChans = self.vhdl_dict["NUM_OUT_CHANS"]
 
         for i in range(nOutSets):

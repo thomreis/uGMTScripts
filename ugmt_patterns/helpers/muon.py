@@ -11,7 +11,7 @@ class Muon():
         ctor:
         TAKES:
             vhdl_dict   as returned by ../../tools/vhdl.VHDLConstantsParser
-            mu_type     either IN (inputs), OUT (outputs), or IMD (intermediates)
+            mu_type     either IN (inputs), OUT (outputs), SER (serializer), or IMD (intermediates)
             bitword     can be None or a 64bit integer (for HW muons)
             obj         can be None or one of the emulator objects (for emulator muons)
             link        integer representing link the muon was received / is sent (HW only)
@@ -45,7 +45,7 @@ class Muon():
                 self.local_link -= vhdl_dict["EMTF_NEG_LOW"]
                 self.tftype = 2
 
-        if mu_type == 'IMD' or mu_type == 'OUT':
+        if mu_type == 'IMD' or mu_type == 'OUT' or mu_type == 'SER':
             bitword_type = 'OUT'
         else:
             bitword_type = 'IN'
@@ -78,6 +78,10 @@ class Muon():
             hf_low = vhdl_dict["HALO_FINE_IN"]
             self.trackAddress = [0]*6
 
+        if mu_type == "OUT":
+            phi_extrapolated_low = vhdl_dict["PHI_EXTRAPOLATED_LOW"]
+            phi_extrapolated_high = vhdl_dict["PHI_EXTRAPOLATED_HIGH"]
+
         if obj == None and bitword != None:     # for hardware
             self.bitword = bitword
             self.Sysign = bithlp.get_shifted_subword(self.bitword, sysign_low, sysign_high)
@@ -87,10 +91,15 @@ class Muon():
             self.ptBits = bithlp.get_shifted_subword(self.bitword, pt_low, pt_high)
             self.phiBits = bithlp.get_shifted_subword(self.bitword, phi_low, phi_high)
             self.globPhiBits = self.phiBits
-            if mu_type == "OUT":
+            if mu_type == "OUT" or mu_type == "SER":
                 self.Iso = bithlp.get_shifted_subword(self.bitword, iso_low, iso_high)
                 self.tfMuonIndex = bithlp.get_shifted_subword(self.bitword, idx_low, idx_high)
+                if mu_type == "OUT":
+                    self.phi_extrapol = bithlp.get_shifted_subword(self.bitword, phi_extrapolated_low, phi_extrapolated_high)
+                else:
+                    self.phi_extrapol = 0
             else:
+                self.phi_extrapol = -1
                 self.Iso = 0
                 self.tfMuonIndex = -1
                 if self.local_link != -1:
@@ -111,12 +120,20 @@ class Muon():
             else:
                 self.globPhiBits = obj.hwPhi()
             if bitword_type == "OUT":
+                if mu_type == "OUT":
+                    self.phi_extrapol = obj.hwPhi() + obj.hwDPhiExtra()
+                    if self.phi_extrapol < 0:
+                        self.phi_extrapol += 576 # wrap around
+                    self.phi_extrapol %= 576 # wrap around
+                else:
+                    self.phi_extrapol = 0
                 self.Iso = obj.hwIso()
                 self.rank = obj.hwRank()
                 self.Sysign = obj.hwCharge() + (obj.hwChargeValid() << 1)
                 self.tfMuonIndex = obj.tfMuonIndex()
 
             else:
+                self.phi_extrapol = -1
                 self.Iso = 0
                 self.tfMuonIndex = -1
                 self.rank = 0
@@ -154,7 +171,9 @@ class Muon():
 
             if bitword_type == "OUT" and self.Iso > 0:
                 self.bitword += (self.Iso << iso_low)
-            if mu_type == "OUT" and self.tfMuonIndex > 0:
+            if mu_type == "OUT" and self.phi_extrapol >= 0:
+                self.bitword += (self.phi_extrapol << phi_extrapolated_low)
+            if (mu_type == "OUT" or mu_type == "SER") and self.tfMuonIndex >= 0:
                 self.bitword += (self.tfMuonIndex << idx_low)
             if bitword_type != "OUT":
                 self.bitword += (self.haloFine << hf_low)
