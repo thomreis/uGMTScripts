@@ -15,13 +15,13 @@ else
 	valid=$1
 fi
 
-#make list of files to unpack and inject and save it in paths/rx_paths.txt
-python $root_path/paths/lists_tx_rx.py
-
 # setup work environment
 mkdir -p $tmp_path
 mkdir $work_path
 mkdir $work_path/error_events
+
+#make list of files to unpack and inject and save it in paths/rx_paths.txt
+python $root_path/paths/lists_tx_rx.py
 
 #loop over $patterns
 while read rxfile
