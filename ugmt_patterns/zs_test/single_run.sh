@@ -21,7 +21,7 @@ mkdir $work_path/error_events
 
 printf "\x1f\x8b\x08\x00\x00\x00\x00\x00" | cat - /home/utcausr/test_patterns/TT_13TeV_RunIIFall15DR76-25nsFlat10to25TSG/rx_TT_13TeV_RunIIFall15DR76-25nsFlat10to25TSG_18.zip | gzip -dc > $tmp_path/uncompressed.txt
 	
-mp7butler.py -c $CONN reset $address --clksrc=internal
+#mp7butler.py -c $CONN reset $address --clksrc=internal # comment this line if the ZS is configured with SWATCH
 	
 mp7butler.py -c $CONN -v xbuffers $address tx PlayOnce -e $e --inject file://$tmp_path/uncompressed.txt 
 mp7butler.py -c $CONN txmgts -e $e --loopback --pattern=none $address
@@ -30,7 +30,7 @@ mp7butler.py -c $CONN rxalign -e $e --to-bx 7,5 $address
 mp7butler.py -c $CONN easylatency $address --txBank 2 --tx 0-3 --rxBank 1 --rx 36-71 --algoLatency 27 --masterLatency 37 --rxExtraFrames 12 --txExtraFrames 12
 mp7butler.py -c $CONN rosetup $address --internal --bxoffset 2
 mp7butler.py -c $CONN romenu $address $ROMENU_FILE standardMenu
-mp7butler.py -c $CONN zsmenu $address $ROMENU_FILE zsStandardMenu
+#mp7butler.py -c $CONN zsmenu $address $ROMENU_FILE zsStandardMenu # comment this line if the ZS is configured with SWATCH
 #bash setup_zs.sh
 	
 echo Pattern:	single >> $work_path/summary.txt

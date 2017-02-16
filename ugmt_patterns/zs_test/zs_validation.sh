@@ -31,7 +31,7 @@ do
 	#magic method to unpack files zipped in python
 	printf "\x1f\x8b\x08\x00\x00\x00\x00\x00" | cat - $rxfile | gzip -dc > $tmp_path/uncompressed.txt
 	
-	mp7butler.py -c $CONN reset $address --clksrc=internal
+	#mp7butler.py -c $CONN reset $address --clksrc=internal # comment this line if the ZS is configured with SWATCH
 	
 	#inject uncompressed rx file
 	mp7butler.py -c $CONN -v xbuffers $address tx PlayOnce -e $e --inject file://$tmp_path/uncompressed.txt
@@ -41,7 +41,7 @@ do
 	mp7butler.py -c $CONN easylatency $address --txBank 2 --tx 0-3 --rxBank 1 --rx 36-71 --algoLatency 27 --masterLatency 37 --rxExtraFrames 12 --txExtraFrames 12
 	mp7butler.py -c $CONN rosetup $address --internal --bxoffset 2
 	mp7butler.py -c $CONN romenu $address $ROMENU_FILE standardMenu
-	mp7butler.py -c $CONN zsmenu $address $ROMENU_FILE zsStandardMenu
+	#mp7butler.py -c $CONN zsmenu $address $ROMENU_FILE zsStandardMenu # comment this line if the ZS is configured with SWATCH
 	#bash setup_zs.sh
 	
 	echo Pattern:	$rxfile >> $work_path/summary.txt
