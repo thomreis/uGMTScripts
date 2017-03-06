@@ -18,7 +18,7 @@ mode = standardMenu.mode(0)
 
 mode.eventSize = 0
 mode.eventToTrigger = 107
-mode.eventType = 0xc0
+mode.eventType = 0xd1
 mode.tokenDelay = 70
 
 
@@ -45,18 +45,18 @@ mode = standardMenu.mode(1)
 
 mode.eventSize = 0
 mode.eventToTrigger = 1
-mode.eventType = 0xde
+mode.eventType = 0xd0
 mode.tokenDelay = 70
 
 
-# Even, bank id 1, +0bx
+# Even, bank id 1, +/-1bx
 c = mode[0]
 c.enable = True
 c.id = 0x1
 c.bankId = 0x1
-c.length = 1
-c.delay = 2 #2 # 0+2 bx
-c.readoutLength = 6
+c.length = 3
+c.delay = 1 #2 # 0+1 bx
+c.readoutLength = 18
 
 c = mode[1]
 c.enable = True
@@ -130,10 +130,52 @@ c.readoutLength = 90
 # zero suppression menus
 zsStandardMenu = mp7.ZeroSuppressionMenu()
 
-zsStandardMenu.setValidationMode(0xc0) # validation every 107th event
+zsStandardMenu.setValidationMode(0xd1) # validation every 107th event
+zsStandardMenu[0].enable = False
+zsStandardMenu[0].data = [0xffffffff]*6
+
 zsStandardMenu[1].enable = True
 zsStandardMenu[1].data = [0x1ff, 0x0]*3
 
 zsStandardMenu[2].enable = True
 zsStandardMenu[2].data = [0x3fc00, 0x0]*3
+
+zsStandardMenu[3].enable = False
+zsStandardMenu[3].data = [0xffffffff]*6
+
+zsStandardMenu[4].enable = False
+zsStandardMenu[4].data = [0xffffffff]*6
+
+zsStandardMenu[5].enable = False
+zsStandardMenu[5].data = [0xffffffff]*6
+
+zsStandardMenu[6].enable = False
+zsStandardMenu[6].data = [0xffffffff]*6
+
+zsStandardMenu[7].enable = False
+zsStandardMenu[7].data = [0xffffffff]*6
+
+zsStandardMenu[8].enable = False
+zsStandardMenu[8].data = [0xffffffff]*6
+
+zsStandardMenu[9].enable = False
+zsStandardMenu[9].data = [0xffffffff]*6
+
+zsStandardMenu[10].enable = False
+zsStandardMenu[10].data = [0xffffffff]*6
+
+zsStandardMenu[11].enable = False
+zsStandardMenu[11].data = [0xffffffff]*6
+
+zsStandardMenu[12].enable = False
+zsStandardMenu[12].data = [0xffffffff]*6
+
+zsStandardMenu[13].enable = False
+zsStandardMenu[13].data = [0xffffffff]*6
+
+zsStandardMenu[14].enable = False
+zsStandardMenu[14].data = [0xffffffff]*6
+
+zsStandardMenu[15].enable = False
+zsStandardMenu[15].data = [0xffffffff]*6
 
