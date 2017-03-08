@@ -100,7 +100,7 @@ class Muon():
                 self.eta_extrapol = bithlp.get_shifted_subword(self.bitword, eta_extrapolated_low, eta_extrapolated_high)
             else:
                 self.phi_extrapol = -1
-                self.eta_extrapol = -1
+                self.eta_extrapol = -9999
                 self.Iso = 0
                 self.tfMuonIndex = -1
                 if self.local_link != -1:
@@ -134,7 +134,7 @@ class Muon():
 
             else:
                 self.phi_extrapol = -1
-                self.eta_extrapol = -1
+                self.eta_extrapol = -9999
                 self.Iso = 0
                 self.tfMuonIndex = -1
                 self.rank = 0
@@ -158,8 +158,8 @@ class Muon():
 
             self.phiBits = obj.hwPhi()
             self.etaBits = obj.hwEta()
-            unsigned_eta = bithlp.twos_complement_to_unsigned(obj.hwEta(), 9)
-            unsigned_phi = bithlp.twos_complement_to_unsigned(obj.hwPhi(), 8)
+            unsigned_eta = bithlp.twos_complement_to_unsigned(obj.hwEta(), eta_high-eta_low+1)
+            unsigned_phi = bithlp.twos_complement_to_unsigned(obj.hwPhi(), phi_high-phi_low+1)
             self.qualityBits = obj.hwQual()
             self.ptBits = obj.hwPt()
 
@@ -175,8 +175,9 @@ class Muon():
             if mu_type == "OUT" or mu_type == "SER":
                 if self.phi_extrapol >= 0:
                     self.bitword += (self.phi_extrapol << phi_extrapolated_low)
-                if self.eta_extrapol >= 0:
-                    self.bitword += (self.eta_extrapol << eta_extrapolated_low)
+                if self.eta_extrapol >= -1 * (1 << (eta_extrapolated_high - eta_extrapolated_low)):
+                    unsigned_eta_extrapol = bithlp.twos_complement_to_unsigned(self.eta_extrapol, eta_extrapolated_high - eta_extrapolated_low + 1)
+                    self.bitword += (unsigned_eta_extrapol << eta_extrapolated_low)
                 if self.tfMuonIndex >= 0:
                     self.bitword += (self.tfMuonIndex << idx_low)
             if bitword_type != "OUT":
