@@ -16,6 +16,7 @@ fi
 
 # setup work environment
 mkdir -p $tmp_path
+rm $tmp_path/*
 mkdir $work_path
 mkdir $work_path/error_events
 
@@ -29,6 +30,7 @@ mp7butler.py -c $CONN txmgts -e $e --loopback --pattern=none $address
 mp7butler.py -c $CONN rxmgts -e $e $address
 mp7butler.py -c $CONN rxalign -e $e --to-bx 7,5 $address
 mp7butler.py -c $CONN easylatency $address --txBank 2 --tx 0-3,24-29 --rxBank 1 --rx 36-71 --algoLatency 27 --masterLatency 37 --rxExtraFrames 12 --txExtraFrames 12 # MP7 FW 2.2.1 has a bug that only a limited number of links is supported with ZS. The limit seems to be 46 which means that only 6 of 8 intermediate muons can be in the RO
+#mp7butler.py -c $CONN easylatency $address --txBank 2 --tx 31 --rxBank 1 --rx 50 --algoLatency 27 --masterLatency 37 --rxExtraFrames 12 --txExtraFrames 12
 mp7butler.py -c $CONN rosetup $address --internal --bxoffset 2
 #mp7butler.py -c $CONN rosetup $address --bxoffset 2
 mp7butler.py -c $CONN romenu $address $ROMENU_FILE standardMenu
@@ -38,8 +40,8 @@ mp7butler.py -c $CONN zsmenu $address $ROMENU_FILE zsStandardMenu # comment this
 echo Pattern:	single >> $work_path/summary.txt
 echo Bx:	Status:  >> $work_path/summary.txt
 
-for i in {14..132}
-#for i in {14..15}
+#for i in {14..132}
+for i in {14..15}
 do
 	mp7butler.py -c $CONN write $address readout.readout_zs.csr.ctrl.en 0 &>/dev/null
 	mp7butler.py -c $CONN -v roevents $address 1 --bxs $i --outputpath $tmp_path/output_nozs.dat &>/dev/null
