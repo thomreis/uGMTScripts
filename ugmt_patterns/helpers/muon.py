@@ -78,9 +78,11 @@ class Muon():
             hf_low = vhdl_dict["HALO_FINE_IN"]
             self.trackAddress = [0]*6
 
-        if mu_type == "OUT":
+        if mu_type == "OUT" or mu_type == 'SER':
             phi_extrapolated_low = vhdl_dict["PHI_EXTRAPOLATED_LOW"]
             phi_extrapolated_high = vhdl_dict["PHI_EXTRAPOLATED_HIGH"]
+            eta_extrapolated_low = vhdl_dict["ETA_EXTRAPOLATED_LOW"]
+            eta_extrapolated_high = vhdl_dict["ETA_EXTRAPOLATED_HIGH"]
 
         if obj == None and bitword != None:     # for hardware
             self.bitword = bitword
@@ -94,12 +96,11 @@ class Muon():
             if mu_type == "OUT" or mu_type == "SER":
                 self.Iso = bithlp.get_shifted_subword(self.bitword, iso_low, iso_high)
                 self.tfMuonIndex = bithlp.get_shifted_subword(self.bitword, idx_low, idx_high)
-                if mu_type == "OUT":
-                    self.phi_extrapol = bithlp.get_shifted_subword(self.bitword, phi_extrapolated_low, phi_extrapolated_high)
-                else:
-                    self.phi_extrapol = 0
+                self.phi_extrapol = bithlp.get_shifted_subword(self.bitword, phi_extrapolated_low, phi_extrapolated_high)
+                self.eta_extrapol = bithlp.get_shifted_subword(self.bitword, eta_extrapolated_low, eta_extrapolated_high)
             else:
                 self.phi_extrapol = -1
+                self.eta_extrapol = -9999
                 self.Iso = 0
                 self.tfMuonIndex = -1
                 if self.local_link != -1:
@@ -120,13 +121,12 @@ class Muon():
             else:
                 self.globPhiBits = obj.hwPhi()
             if bitword_type == "OUT":
-                if mu_type == "OUT":
-                    self.phi_extrapol = obj.hwPhi() + obj.hwDPhiExtra()
-                    if self.phi_extrapol < 0:
-                        self.phi_extrapol += 576 # wrap around
-                    self.phi_extrapol %= 576 # wrap around
+                if mu_type == "OUT" or mu_type == 'SER':
+                    self.phi_extrapol = obj.hwPhiAtVtx()
+                    self.eta_extrapol = obj.hwEtaAtVtx()
                 else:
                     self.phi_extrapol = 0
+                    self.eta_extrapol = 0
                 self.Iso = obj.hwIso()
                 self.rank = obj.hwRank()
                 self.Sysign = obj.hwCharge() + (obj.hwChargeValid() << 1)
@@ -134,6 +134,7 @@ class Muon():
 
             else:
                 self.phi_extrapol = -1
+                self.eta_extrapol = -9999
                 self.Iso = 0
                 self.tfMuonIndex = -1
                 self.rank = 0
@@ -157,8 +158,8 @@ class Muon():
 
             self.phiBits = obj.hwPhi()
             self.etaBits = obj.hwEta()
-            unsigned_eta = bithlp.twos_complement_to_unsigned(obj.hwEta(), 9)
-            unsigned_phi = bithlp.twos_complement_to_unsigned(obj.hwPhi(), 8)
+            unsigned_eta = bithlp.twos_complement_to_unsigned(obj.hwEta(), eta_high-eta_low+1)
+            unsigned_phi = bithlp.twos_complement_to_unsigned(obj.hwPhi(), phi_high-phi_low+1)
             self.qualityBits = obj.hwQual()
             self.ptBits = obj.hwPt()
 
@@ -171,10 +172,14 @@ class Muon():
 
             if bitword_type == "OUT" and self.Iso > 0:
                 self.bitword += (self.Iso << iso_low)
-            if mu_type == "OUT" and self.phi_extrapol >= 0:
-                self.bitword += (self.phi_extrapol << phi_extrapolated_low)
-            if (mu_type == "OUT" or mu_type == "SER") and self.tfMuonIndex >= 0:
-                self.bitword += (self.tfMuonIndex << idx_low)
+            if mu_type == "OUT" or mu_type == "SER":
+                if self.phi_extrapol >= 0:
+                    self.bitword += (self.phi_extrapol << phi_extrapolated_low)
+                if self.eta_extrapol >= -1 * (1 << (eta_extrapolated_high - eta_extrapolated_low)):
+                    unsigned_eta_extrapol = bithlp.twos_complement_to_unsigned(self.eta_extrapol, eta_extrapolated_high - eta_extrapolated_low + 1)
+                    self.bitword += (unsigned_eta_extrapol << eta_extrapolated_low)
+                if self.tfMuonIndex >= 0:
+                    self.bitword += (self.tfMuonIndex << idx_low)
             if bitword_type != "OUT":
                 self.bitword += (self.haloFine << hf_low)
 
