@@ -1,7 +1,9 @@
 import os
 
 #patterns_root = '/home/utcausr/test_patterns/TTJets_13TeV_RunIISpring16DR80_PUSpring16'
-patterns_root = '/home/utcausr/test_patterns/TT_13TeV_RunIIFall15DR76-25nsFlat10to25TSG'
+#patterns_root = '/home/utcausr/test_patterns/TT_13TeV_RunIIFall15DR76-25nsFlat10to25TSG'
+patterns_root = '/home/utcausr/test_patterns/JPsiToMuMu_Pt20to120_EtaPhiRestricted'
+#patterns_root = '/home/utcausr/test_patterns/TT_TuneCUETP8M1_13TeV'
 files_tx = list()
 files_rx = list()
 

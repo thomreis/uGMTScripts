@@ -49,6 +49,15 @@ mode.eventType = 0xd0
 mode.tokenDelay = 70
 
 
+## Even, bank id 1, +0bx
+#c = mode[0]
+#c.enable = True
+#c.id = 0x1
+#c.bankId = 0x1
+#c.length = 5
+#c.delay = 0 
+#c.readoutLength = 30
+
 # Even, bank id 1, +/-1bx
 c = mode[0]
 c.enable = True
@@ -58,6 +67,15 @@ c.length = 3
 c.delay = 1 #2 # 0+1 bx
 c.readoutLength = 18
 
+## Even, bank id 1
+#c = mode[0]
+#c.enable = True
+#c.id = 0x1
+#c.bankId = 0x1
+#c.length = 1
+#c.delay = 2 #2 # 0 bx
+#c.readoutLength = 6
+
 c = mode[1]
 c.enable = True
 c.id = 0x2
@@ -65,6 +83,22 @@ c.bankId = 0x2
 c.length = 5
 c.delay = 0
 c.readoutLength = 30
+
+#c = mode[1]
+#c.enable = True
+#c.id = 0x2
+#c.bankId = 0x2
+#c.length = 3
+#c.delay = 1
+#c.readoutLength = 18
+
+#c = mode[1]
+#c.enable = True
+#c.id = 0x2
+#c.bankId = 0x2
+#c.length = 1
+#c.delay = 2
+#c.readoutLength = 6
 
 ##############################################################################
 # Minimal menu for testing.

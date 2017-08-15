@@ -5,19 +5,16 @@ root_path=/home/utcausr/uGMTScripts/ugmt_patterns/zs_test
 work_path=$root_path/ro_check_`date +%Y%m%d_%H%M%S`
 tmp_path=$root_path/tmp
 ROMENU_FILE=$root_path/../mp7_test/ugmt_ro_zs_menu.py
+#ROMENU_FILE=$root_path/../mp7_test/cppf_ro_zs_menu.py
 
 txstart=0
-txend=3
+txend=1
+#txend=31
 rxstart=0
-rxend=3
+rxend=1
+#rxend=37
 
 e=0-71
-
-if [ -z ${1+x} ]; then 
-	valid=nv
-else
-	valid=$1
-fi
 
 # setup work environment
 mkdir -p $tmp_path

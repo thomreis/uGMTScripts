@@ -6,7 +6,7 @@ with open( sys.argv[1]+'/summary.txt', 'a+' ) as summ:
 	for line in summ:
 		if line[0].isdigit():
 			try:
-				status = line.strip().split( '\t' )[1].strip()
+				status = line.strip().split( ' ' )[1].strip()
 				if status == '0':
 					zeros += 1
 				else:
