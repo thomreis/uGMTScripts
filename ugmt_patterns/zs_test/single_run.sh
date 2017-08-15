@@ -4,8 +4,8 @@ address=ugmt
 root_path=/home/utcausr/uGMTScripts/ugmt_patterns/zs_test
 work_path=$root_path/single_run_`date +%Y%m%d_%H%M%S`
 tmp_path=$root_path/tmp
-#ROMENU_FILE=$root_path/../mp7_test/ugmt_ro_zs_menu.py
-ROMENU_FILE=$root_path/../mp7_test/cppf_ro_zs_menu.py
+ROMENU_FILE=$root_path/../mp7_test/ugmt_ro_zs_menu.py
+#ROMENU_FILE=$root_path/../mp7_test/cppf_ro_zs_menu.py
 
 e=0-71
 
