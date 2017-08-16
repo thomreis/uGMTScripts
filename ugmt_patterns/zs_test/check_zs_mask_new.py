@@ -14,6 +14,8 @@ class BxBlock(object):
             self.bx = int(floor(((rawData[0] >> 24) & 0xff) / 6)) - int(floor(self.totBx / 2))
             self.valFlag = rawData[0] & 0x1
             self.data = rawData[1:]
+        else:
+            print "Wrong number of raw data words: {l}".format(l=len(rawData))
 
     def getBx(self):
         return self.bx
