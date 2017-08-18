@@ -178,6 +178,7 @@ def compareBlocks(block1, block2):
     passComp = True
     errorMsgs = []
     suppBxCtr = 0
+    valFlagCtr = 0
     for bx in bxBlocks1:
         if bx in bxBlocks2:
             #print "    BX block {bx} was not suppressed".format(bx=bx)
@@ -185,12 +186,14 @@ def compareBlocks(block1, block2):
                 #print "        BX blocks are equal"
                 if bxBlocks2[bx].applyZsMask(masksDict[block2.getCapId()]):
                     suppBxCtr += 1
-                    if newZs and not bxBlocks2[bx].getValFlag():
-                        errorMsgs.append("Error. Block {id}: Bx block {bx} should have been suppressed.".format(id=block1.getId(), bx=bx))
-                        print errorMsgs[-1]
-                        passComp = False
-                    #else:
-                    #    print "        OK. Block is zero but this is a validation event."
+                    if newZs:
+                        if bxBlocks2[bx].getValFlag():
+                            valFlagCtr += 1
+                            #print "        OK. Block is zero but this is a validation event."
+                        else:
+                            errorMsgs.append("Error. Block {id}: Bx block {bx} should have been suppressed.".format(id=block1.getId(), bx=bx))
+                            print errorMsgs[-1]
+                            passComp = False
             else:
                 errorMsgs.append("Error. Block {id}: BX blocks {bx} do not match".format(id=block1.getId(), bx=bx))
                 print errorMsgs[-1]
@@ -202,7 +205,7 @@ def compareBlocks(block1, block2):
                 print errorMsgs[-1]
                 passComp = False
 
-    if suppBxCtr == block1.getNBxBlocks() and not block2.getValInvFlag():
+    if suppBxCtr == block1.getNBxBlocks() and not valFlagCtr == block2.getNBxBlocks():
         errorMsgs.append("Error. Block {id}: All BX blocks should have been suppressed and this block should not exist.".format(id=block1.getId()))
         print errorMsgs[-1]
         passComp = False
