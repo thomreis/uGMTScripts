@@ -172,7 +172,7 @@ zsStandardMenu[1].enable = True
 zsStandardMenu[1].data = [0x1ff, 0x0]*3
 
 zsStandardMenu[2].enable = True
-zsStandardMenu[2].data = [0x3fc00, 0x0]*3
+zsStandardMenu[2].data = [0x7fc00, 0x0]*3
 
 zsStandardMenu[3].enable = False
 zsStandardMenu[3].data = [0xffffffff]*6

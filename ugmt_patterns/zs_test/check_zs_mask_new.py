@@ -16,6 +16,10 @@ class BxBlock(object):
             self.data = rawData[1:]
         else:
             print "Wrong number of raw data words: {l}".format(l=len(rawData))
+            self.bx = bx
+            self.totBx = totBx
+            self.valFlag = valFlag
+            self.data = rawData
 
     def getBx(self):
         return self.bx

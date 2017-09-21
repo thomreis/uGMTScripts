@@ -40,13 +40,26 @@ do
   #bash setup_zs.sh
 
   echo Pattern:  $rxfile >> $work_path/summary.txt
+  echo Pattern:  $rxfile >> $work_path/zs_status.txt
   echo Bx:       Status: >> $work_path/summary.txt
 
   for i in {14..132}
   do
+    echo Start &>> $work_path/zs_status.txt
+    echo BX $i &>> $work_path/zs_status.txt
+    mp7butler.py -c $CONN inspect $address readout.readout_zs.csr.ctrl.val_mode | grep readout.readout_zs &>> $work_path/zs_status.txt
+    mp7butler.py -c $CONN inspect $address readout.readout_zs.csr.info | grep readout.readout_zs &>> $work_path/zs_status.txt
+    mp7butler.py -c $CONN inspect $address readout.readout_zs.csr.stat | grep readout.readout_zs &>> $work_path/zs_status.txt
+
     #disable zs menu
     mp7butler.py -c $CONN write $address readout.readout_zs.csr.ctrl.en 0 &>/dev/null
     mp7butler.py -c $CONN -v roevents $address 1 --bxs $i --outputpath $tmp_path/output_nozs.dat &>/dev/null
+
+    echo After no ZS RO &>> $work_path/zs_status.txt
+    echo BX $i &>> $work_path/zs_status.txt
+    mp7butler.py -c $CONN inspect $address readout.readout_zs.csr.ctrl.val_mode | grep readout.readout_zs &>> $work_path/zs_status.txt
+    mp7butler.py -c $CONN inspect $address readout.readout_zs.csr.info | grep readout.readout_zs &>> $work_path/zs_status.txt
+    mp7butler.py -c $CONN inspect $address readout.readout_zs.csr.stat | grep readout.readout_zs &>> $work_path/zs_status.txt
 
     #enable zs menu and check whether it is enabled (there were some problems with this)
     mp7butler.py -c $CONN write $address readout.readout_zs.csr.ctrl.en 1 &>/dev/null
@@ -61,6 +74,12 @@ do
     done
 
     mp7butler.py -c $CONN -v roevents $address 1 --bxs $i --outputpath $tmp_path/output_zs.dat &>/dev/null
+
+    echo After ZS RO &>> $work_path/zs_status.txt
+    echo BX $i &>> $work_path/zs_status.txt
+    mp7butler.py -c $CONN inspect $address readout.readout_zs.csr.ctrl.val_mode | grep readout.readout_zs &>> $work_path/zs_status.txt
+    mp7butler.py -c $CONN inspect $address readout.readout_zs.csr.info | grep readout.readout_zs &>> $work_path/zs_status.txt
+    mp7butler.py -c $CONN inspect $address readout.readout_zs.csr.stat | grep readout.readout_zs &>> $work_path/zs_status.txt
 
     python $root_path/check_zs_mask_new.py $tmp_path/output_nozs.dat $tmp_path/output_zs.dat $work_path $i $rxfile
     echo Bx $i/132 complete
