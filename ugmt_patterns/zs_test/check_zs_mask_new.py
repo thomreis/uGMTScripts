@@ -256,7 +256,7 @@ if __name__ == '__main__':
     if sys.maxint < 0xffffffff:
         print "Warning: This system uses only 32 bit for long integer values."
 
-    masksDict = {1:[0x1ff, 0x0]*3, 2:[0x3fc00, 0x0]*3, 3:[0x3fc00, 0x0]*3}
+    masksDict = {1:[0x1ff, 0x0]*3, 2:[0x7fc00, 0x0]*3, 3:[0x7fc00, 0x0]*3}
     #masksDict = {1:[0x8f000]*6, 2:[0x3fc00, 0x0]*3, 3:[0x3fc00, 0x0]*3}
 
     nozsPath = sys.argv[1]

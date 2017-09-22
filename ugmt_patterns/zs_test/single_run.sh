@@ -16,8 +16,8 @@ mkdir $work_path
 mkdir $work_path/error_events
 
 #printf "\x1f\x8b\x08\x00\x00\x00\x00\x00" | cat - /home/utcausr/test_patterns/TT_13TeV_RunIIFall15DR76-25nsFlat10to25TSG/rx_TT_13TeV_RunIIFall15DR76-25nsFlat10to25TSG_18.zip | gzip -dc > $tmp_path/uncompressed.txt
-#printf "\x1f\x8b\x08\x00\x00\x00\x00\x00" | cat - /home/utcausr/test_patterns/TT_TuneCUETP8M1_13TeV/rx_TT_TuneCUETP8M1_13TeV_8.zip | gzip -dc > $tmp_path/uncompressed.txt
-printf "\x1f\x8b\x08\x00\x00\x00\x00\x00" | cat - /home/utcausr/test_patterns/JPsiToMuMu_Pt20to120_EtaPhiRestricted/rx_JPsiToMuMu_Pt20to120_EtaPhiRestricted_1.zip | gzip -dc > $tmp_path/uncompressed.txt
+printf "\x1f\x8b\x08\x00\x00\x00\x00\x00" | cat - /home/utcausr/test_patterns/TT_TuneCUETP8M1_13TeV/rx_TT_TuneCUETP8M1_13TeV_8.zip | gzip -dc > $tmp_path/uncompressed.txt
+#printf "\x1f\x8b\x08\x00\x00\x00\x00\x00" | cat - /home/utcausr/test_patterns/JPsiToMuMu_Pt20to120_EtaPhiRestricted/rx_JPsiToMuMu_Pt20to120_EtaPhiRestricted_1.zip | gzip -dc > $tmp_path/uncompressed.txt
 
 mp7butler.py -c $CONN reset $address --clksrc=internal # comment this line if the ZS is configured with SWATCH
 #mp7butler.py -c $CONN reset $address --clksrc=external # comment this line if the ZS is configured with SWATCH
