@@ -242,12 +242,20 @@ def zsTest(nozsPath, zsPath, masksDict, workPath, bx, pattern):
         # copy files to error_events dir
         nozsFile = open(nozsPath, 'r')
         zsFile = open(zsPath)
+        nozsRologFile = open(nozsPath[0:nozsPath.rfind('/')]+'/roevents_nozs.txt', 'r')
+        zsRologFile = open(zsPath[0:zsPath.rfind('/')]+'/roevents_zs.txt')
         with open(workPath+'error_events/nozs_'+bx+'_'+pattern+'.txt', 'w') as nozsErrorFile:
             nozsErrorFile.write(nozsFile.read())
         with open(workPath+'error_events/zs_'+bx+'_'+pattern+'.txt', 'w') as zsErrorFile:
             zsErrorFile.write(zsFile.read())
+        with open(workPath+'error_events/roevt_nozs_'+bx+'_'+pattern+'.txt', 'w') as nozsRoevtErrorFile:
+            nozsRoevtErrorFile.write(nozsRologFile.read())
+        with open(workPath+'error_events/roevt_zs_'+bx+'_'+pattern+'.txt', 'w') as zsRoevtErrorFile:
+            zsRoevtErrorFile.write(zsRologFile.read())
         nozsFile.close()
         zsFile.close()
+        nozsRologFile.close()
+        zsRologFile.close()
 
     failureLog.close()
     summ.close()

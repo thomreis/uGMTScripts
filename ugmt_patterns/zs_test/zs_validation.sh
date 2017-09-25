@@ -53,7 +53,7 @@ do
 
     #disable zs menu
     mp7butler.py -c $CONN write $address readout.readout_zs.csr.ctrl.en 0 &>/dev/null
-    mp7butler.py -c $CONN -v roevents $address 1 --bxs $i --outputpath $tmp_path/output_nozs.dat &>/dev/null
+    mp7butler.py -c $CONN -v roevents $address 1 --bxs $i --outputpath $tmp_path/output_nozs.dat &> $tmp_path/roevents_nozs.txt
 
     echo After no ZS RO &>> $work_path/zs_status.txt
     echo BX $i &>> $work_path/zs_status.txt
@@ -73,7 +73,7 @@ do
       echo Zero suppression status ${en:(-1)}
     done
 
-    mp7butler.py -c $CONN -v roevents $address 1 --bxs $i --outputpath $tmp_path/output_zs.dat &>/dev/null
+    mp7butler.py -c $CONN -v roevents $address 1 --bxs $i --outputpath $tmp_path/output_zs.dat &> $tmp_path/roevents_zs.txt
 
     echo After ZS RO &>> $work_path/zs_status.txt
     echo BX $i &>> $work_path/zs_status.txt
